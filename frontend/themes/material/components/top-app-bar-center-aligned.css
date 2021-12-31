@@ -1,0 +1,18 @@
+.top-app-bar.center-aligned {
+    --height: var(--md-top-app-bar-center-aligned-height);
+    --padding: 0 var(--md-space-1);
+
+    --headline-line-height: var(--md-title-large-line-height);
+    --headline-margin: 0;
+    --headline-size: var(--md-title-large-size);
+    --headline-tracking: var(--md-title-large-tracking);
+    --headline-weight: var(--md-title-large-weight);
+
+    align-items: center;
+}
+
+.top-app-bar.center-aligned h1 {
+    inset: 50% auto auto 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}

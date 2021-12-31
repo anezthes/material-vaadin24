@@ -1,0 +1,18 @@
+.top-app-bar.medium {
+    --height: var(--md-top-app-bar-medium-height);
+    --padding: var(--md-space-2) var(--md-space-1) var(--md-space-5) var(--md-space-1);
+
+    --headline-line-height: var(--md-headline-small-line-height);
+    --headline-margin: 0 var(--md-space-3);
+    --headline-size: var(--md-headline-small-size);
+    --headline-tracking: var(--md-headline-small-tracking);
+    --headline-weight: var(--md-headline-small-weight);
+
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+.top-app-bar.medium h1 {
+    order: 2;
+    width: 100%;
+}

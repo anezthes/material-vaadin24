@@ -1,0 +1,12 @@
+.top-app-bar.small {
+    --height: var(--md-top-app-bar-small-height);
+    --padding: 0 var(--md-space-1);
+
+    --headline-line-height: var(--md-title-large-line-height);
+    --headline-margin: 0 var(--md-space-3) 0 var(--md-space-1);
+    --headline-size: var(--md-title-large-size);
+    --headline-tracking: var(--md-title-large-tracking);
+    --headline-weight: var(--md-title-large-weight);
+
+    align-items: center;
+}

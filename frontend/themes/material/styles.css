@@ -1,5 +1,8 @@
 @import url('./components/navigation-drawer.css');
 @import url('./components/navigation-drawer-item.css');
+@import url('./components/top-app-bar-center-aligned.css');
+@import url('./components/top-app-bar-medium.css');
+@import url('./components/top-app-bar-small.css');
 @import url('./components/top-app-bar.css');
 @import url('./color.css');
 @import url('./elevation.css');
@@ -65,9 +68,13 @@ html {
     --md-drawer-item-pressed-opacity: 0.2;
 
     /* === TOP APP BAR === */
-    --md-top-app-bar-height: 64px;
     --md-top-app-bar-icon-size: 24px;
     --md-top-app-bar-target-size: 48px;
     --md-top-app-bar-avatar-size: 30px;
+
+    --md-top-app-bar-center-aligned-height: 64px;
+    --md-top-app-bar-small-height: 64px;
+    --md-top-app-bar-medium-height: 112px;
+    --md-top-app-bar-large-height: 152px;
 
 }
