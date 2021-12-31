@@ -1,0 +1,12 @@
+:host([theme~="text"]) {
+    --color: var(--md-primary);
+    --min-width: var(--md-button-text-min-width);
+    --padding: var(--md-button-text-padding);
+
+    --disabled-background: none;
+    --hover-background: var(--md-primary);
+}
+
+:host([theme~="text"]) [part='prefix'] ::slotted(.material-icons) {
+    margin-inline-start: 0;
+}

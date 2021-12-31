@@ -1,0 +1,67 @@
+/* Link */
+.navigation-drawer-item a {
+    align-items: center;
+    border-radius: var(--md-drawer-item-shape);
+    color: var(--md-on-surface-variant);
+    display: flex;
+    font-size: var(--md-label-large-size);
+    font-weight: var(--md-label-large-weight);
+    gap: var(--md-drawer-item-padding-between);
+    height: var(--md-drawer-item-height);
+    letter-spacing: var(--md-label-large-tracking);
+    line-height: var(--md-label-large-line-height);
+    padding: var(--md-drawer-item-padding);
+    position: relative;
+    text-decoration: none;
+}
+
+/* Icon */
+.navigation-drawer-item a .material-icons {
+    font-size: var(--md-drawer-item-icon-size);
+}
+
+/* Badge */
+.navigation-drawer-item a *:nth-child(3) {
+    margin-inline-start: auto;
+}
+
+/* Highlight (::before) & states (::after) */
+.navigation-drawer-item a::before,
+.navigation-drawer-item a::after {
+    border-radius: inherit;
+    content: "";
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+}
+.navigation-drawer-item a::before {
+    background: var(--md-secondary-container);
+}
+.navigation-drawer-item a::after {
+    background: var(--md-on-surface);
+}
+
+/* Hover */
+.navigation-drawer-item a:hover::after {
+    opacity: var(--md-drawer-item-hover-opacity);
+}
+
+/* Focus */
+.navigation-drawer-item a:focus::after {
+    opacity: var(--md-drawer-item-focus-opacity);
+}
+
+/* Active */
+.navigation-drawer-item a:active::after {
+    opacity: var(--md-drawer-item-pressed-opacity);
+}
+
+/* Highlight */
+.navigation-drawer-item a[highlight] {
+    color: var(--md-on-secondary-container);
+}
+.navigation-drawer-item a[highlight]::before {
+    opacity: 1;
+}

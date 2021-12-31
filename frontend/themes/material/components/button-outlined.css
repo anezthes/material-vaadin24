@@ -1,0 +1,11 @@
+:host([theme~="outlined"]) {
+    --color: var(--md-primary);
+    --outline: var(--md-button-outline-width) solid var(--md-outline);
+
+    --disabled-background: none;
+    --disabled-outline-color: var(--md-on-surface);
+    --hover-background: var(--md-primary);
+    --hover-opacity: var(--md-hover-opacity);
+    --focus-outline-color: var(--md-primary);
+    --pressed-outline-color: var(--md-outline);
+}

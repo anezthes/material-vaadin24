@@ -1,0 +1,23 @@
+html {
+    --md-space-interval: 4px;
+    --md-space-1: calc(var(--md-space-interval) * 1);
+    --md-space-2: calc(var(--md-space-interval) * 2);
+    --md-space-3: calc(var(--md-space-interval) * 3);
+    --md-space-4: calc(var(--md-space-interval) * 4);
+    --md-space-5: calc(var(--md-space-interval) * 5);
+    --md-space-6: calc(var(--md-space-interval) * 6);
+    --md-space-7: calc(var(--md-space-interval) * 7);
+    --md-space-8: calc(var(--md-space-interval) * 8);
+    --md-space-9: calc(var(--md-space-interval) * 9);
+    --md-space-10: calc(var(--md-space-interval) * 10);
+    --md-space-11: calc(var(--md-space-interval) * 11);
+    --md-space-12: calc(var(--md-space-interval) * 12);
+    --md-space-13: calc(var(--md-space-interval) * 13);
+    --md-space-14: calc(var(--md-space-interval) * 14);
+    --md-space-15: calc(var(--md-space-interval) * 15);
+    --md-space-16: calc(var(--md-space-interval) * 16);
+    --md-space-17: calc(var(--md-space-interval) * 17);
+    --md-space-18: calc(var(--md-space-interval) * 18);
+    --md-space-19: calc(var(--md-space-interval) * 19);
+    --md-space-20: calc(var(--md-space-interval) * 20);
+}

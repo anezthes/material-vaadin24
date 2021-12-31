@@ -1,0 +1,22 @@
+:host([theme~="fab-extended"]) {
+    --background: var(--md-primary-container);
+    --color: var(--md-on-primary-container);
+    --elevation: var(--md-elevation-3);
+    --height: var(--md-button-fab-height);
+    --icon-size: var(--md-button-fab-icon-size);
+    --min-width: var(--md-button-fab-extended-min-width);
+    --padding: var(--md-button-fab-extended-padding);
+    --padding-between-elements: var(--md-button-fab-extended-padding-between-elements);
+    --shape: var(--md-button-fab-shape);
+
+    --hover-background: var(--md-on-primary-container);
+    --hover-elevation: var(--md-elevation-4);
+    --focus-elevation: var(--md-elevation-3);
+    --pressed-elevation: var(--md-elevation-3);
+}
+
+:host([theme~="fab-extended"]) [part='prefix'] ::slotted(.material-icons) {
+    margin-inline-end: var(--padding-between-elements);
+    /* Need has-prefix/has-suffix to skip this */
+    margin-inline-start: -4px;
+}

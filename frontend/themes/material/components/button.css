@@ -1,0 +1,142 @@
+@import "button-elevated.css";
+@import "button-filled.css";
+@import "button-filled-tonal.css";
+@import "button-outlined.css";
+@import "button-text.css";
+@import "button-fab.css";
+@import "button-fab-small.css";
+@import "button-fab-large.css";
+@import "button-fab-extended.css";
+
+:host {
+    --background: none;
+    --color: black;
+    --elevation: none;
+    --font: var(--md-label-large-size);
+    --height: var(--md-button-height);
+    --icon-size: var(--md-button-icon-size);
+    --line-height: var(--md-label-large-line-height);
+    --min-width: auto;
+    --outline: none;
+    --padding: var(--md-button-padding);
+    --padding-between-elements: var(--md-button-padding-between-elements);
+    --shape: var(--md-button-shape);
+    --tracking: var(--md-label-large-tracking);
+    --weight: var(--md-label-large-weight);
+    --width: auto;
+
+    /* States */
+    --disabled-background: var(--md-on-surface);
+    --disabled-color: var(--md-on-surface);
+    --disabled-elevation: none;
+    --disabled-outline-color: none;
+    --hover-background: none;
+    --hover-elevation: none;
+    --hover-opacity: var(--md-hover-opacity);
+    --focus-elevation: none;
+    --focus-opacity: var(--md-focus-opacity);
+    --focus-outline-color: none;
+    --pressed-elevation: none;
+    --pressed-opacity: var(--md-pressed-opacity);
+    --pressed-outline-color: none;
+
+    border-radius: var(--shape);
+    box-shadow: var(--elevation);
+    box-sizing: border-box;
+    color: var(--color);
+    font-size: var(--font);
+    font-weight: var(--weight);
+    height: var(--height);
+    letter-spacing: var(--tracking);
+    line-height: var(--line-height);
+    padding: var(--padding);
+    width: var(--width);
+}
+
+[part='prefix'],
+[part='label'],
+[part='suffix'] {
+    z-index: 1;
+}
+
+/* Prefix & suffix */
+[part='prefix'],
+[part='suffix'] {
+    display: flex;
+}
+
+/* Icon */
+::slotted(.material-icons) {
+    font-size: var(--icon-size) !important;
+}
+[part='prefix'] ::slotted(.material-icons) {
+    margin-inline-end: var(--padding-between-elements);
+    /* Need has-prefix/has-suffix to skip this */
+    margin-inline-start: calc(var(--padding-between-elements) * -1);
+}
+
+/* Background (::before) & states (::after) */
+:host::before,
+:host::after {
+    border-radius: inherit;
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+}
+:host::before {
+    background: var(--background);
+    border: var(--outline);
+    opacity: 1;
+}
+:host::after {
+    background: var(--hover-background);
+    opacity: 0;
+}
+
+/* Hover */
+:host(:hover) {
+    box-shadow: var(--hover-elevation);
+}
+:host(:hover)::after {
+    opacity: var(--hover-opacity);
+}
+
+/* Focus */
+:host([focused]) {
+    box-shadow: var(--focus-elevation);
+}
+:host([focused])::before {
+    border-color: var(--focus-outline-color);
+}
+:host([focused])::after {
+    opacity: var(--focus-opacity);
+}
+
+/* Active */
+:host([active]) {
+    box-shadow: var(--pressed-elevation);
+}
+:host([active])::before {
+    border-color: var(--pressed-outline-color);
+}
+:host([active])::after {
+    opacity: var(--pressed-opacity);
+}
+
+/* Disabled */
+:host([disabled]) {
+    box-shadow: var(--disabled-elevation);
+    color: var(--disabled-color);
+}
+:host([disabled])::before {
+    background: var(--disabled-background);
+    border-color: var(--disabled-outline-color);
+    opacity: var(--md-disabled-container-opacity);
+}
+:host([disabled]) [part] {
+    opacity: var(--md-disabled-content-opacity);
+}
+:host([disabled])::after {
+    content: none;
+}

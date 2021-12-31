@@ -1,0 +1,25 @@
+/* Divider */
+nav[slot="drawer"]:not(:last-of-type) {
+    border-bottom: 1px solid var(--md-outline);
+}
+
+/* List */
+nav[slot="drawer"] ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Section label */
+nav[slot="drawer"] h2 {
+    align-items: center;
+    color: var(--md-on-surface-variant);
+    display: flex;
+    font-size: var(--md-title-small-size);
+    font-weight: var(--md-title-small-weight);
+    height: var(--md-drawer-item-height);
+    letter-spacing: var(--md-title-small-tracking);
+    line-height: var(--md-title-small-line-height);
+    margin: 0;
+    padding: var(--md-drawer-item-padding);
+}

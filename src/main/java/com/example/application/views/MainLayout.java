@@ -1,172 +1,93 @@
 package com.example.application.views;
 
-import com.example.application.views.buttons.ButtonsView;
-import com.example.application.views.cards.CardsView;
-import com.example.application.views.chips.ChipsView;
-import com.example.application.views.dialogs.DialogsView;
-import com.example.application.views.navigationbar.NavigationbarView;
-import com.example.application.views.navigationdrawer.NavigationdrawerView;
-import com.example.application.views.navigationrail.NavigationrailView;
-import com.example.application.views.topappbar.TopappbarView;
-import com.vaadin.flow.component.Component;
+import com.example.application.components.NavigationDrawerItem;
+import com.example.application.components.TopAppBar;
+import com.example.application.MaterialIcon;
 import com.vaadin.flow.component.applayout.AppLayout;
-import com.vaadin.flow.component.applayout.DrawerToggle;
-import com.vaadin.flow.component.button.ButtonVariant;
-import com.vaadin.flow.component.html.Footer;
-import com.vaadin.flow.component.html.H1;
+import com.vaadin.flow.component.dependency.CssImport;
+import com.vaadin.flow.component.dependency.StyleSheet;
 import com.vaadin.flow.component.html.H2;
-import com.vaadin.flow.component.html.Header;
-import com.vaadin.flow.component.html.ListItem;
 import com.vaadin.flow.component.html.Nav;
-import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.html.UnorderedList;
 import com.vaadin.flow.router.PageTitle;
-import com.vaadin.flow.router.RouterLink;
-import java.util.ArrayList;
-import java.util.List;
 
-/**
- * The main view is a top-level placeholder for other views.
- */
-@PageTitle("Main")
+@CssImport("/themes/material/styles.css")
+@CssImport(value = "/themes/material/components/app-layout.css", themeFor = "vaadin-app-layout")
+@CssImport(value = "/themes/material/components/button.css", themeFor = "vaadin-button")
+@CssImport(value = "/themes/material/components/drawer-toggle.css", themeFor = "vaadin-drawer-toggle")
+@PageTitle("Material Design 3 for Vaadin 23")
+@StyleSheet("https://fonts.googleapis.com/icon?family=Material+Icons")
 public class MainLayout extends AppLayout {
 
-    public static class MenuItemInfo {
+	public TopAppBar topAppBar;
 
-        private String text;
-        private String iconClass;
-        private Class<? extends Component> view;
+	public String STYLES_LABEL = "styles-label";
+	public String COMPONENTS_LABEL = "components-label";
 
-        public MenuItemInfo(String text, String iconClass, Class<? extends Component> view) {
-            this.text = text;
-            this.iconClass = iconClass;
-            this.view = view;
-        }
+	public MainLayout() {
+		getElement().executeJs(
+				"var prevScrollPos = 0;" +
+						"var topappbar = document.querySelector('.top-app-bar');" +
+						"var content = this.shadowRoot.querySelector('[content]');" +
+						"content.addEventListener('scroll', function(e) {" +
+						"  if (content.scrollTop > 0) {" +
+						"    topappbar.classList.add('surface-2');" +
+						"  } else {" +
+						"    topappbar.classList.remove('surface-2');" +
+						"  }" +
+						"});"
+		);
+		setPrimarySection(Section.DRAWER);
+		createAppBar();
+		createNavigationDrawer();
+	}
 
-        public String getText() {
-            return text;
-        }
+	private void createAppBar() {
+		topAppBar = new TopAppBar();
+		addToNavbar(topAppBar);
+	}
 
-        public String getIconClass() {
-            return iconClass;
-        }
+	private void createNavigationDrawer() {
+		// Styles
+		createStylesNav();
 
-        public Class<? extends Component> getView() {
-            return view;
-        }
+		// Components
+		createComponentsNav();
+	}
 
-    }
+	private void createStylesNav() {
+		H2 label = new H2("Styles");
+		label.setId(STYLES_LABEL);
 
-    private H1 viewTitle;
+		UnorderedList list = new UnorderedList();
+		list.add(
+				new NavigationDrawerItem(ColorView.class, "Color", MaterialIcon.PALETTE),
+                new NavigationDrawerItem(TypographyView.class, "Typography", MaterialIcon.ABC)
+		);
 
-    public MainLayout() {
-        setPrimarySection(Section.DRAWER);
-        addToNavbar(true, createHeaderContent());
-        addToDrawer(createDrawerContent());
-    }
+		Nav nav = new Nav(label, list);
+		nav.getElement().setAttribute("aria-labelledby", STYLES_LABEL);
+		addToDrawer(nav);
+	}
 
-    private Component createHeaderContent() {
-        DrawerToggle toggle = new DrawerToggle();
-        toggle.addClassName("text-secondary");
-        toggle.addThemeVariants(ButtonVariant.LUMO_CONTRAST);
-        toggle.getElement().setAttribute("aria-label", "Menu toggle");
+	private void createComponentsNav() {
+		H2 label = new H2("Components");
+		label.setId(COMPONENTS_LABEL);
 
-        viewTitle = new H1();
-        viewTitle.addClassNames("m-0", "text-l");
+		UnorderedList list = new UnorderedList();
+		list.add(
+				new NavigationDrawerItem(ButtonsView.class, "Buttons", MaterialIcon.INBOX, "26"),
+				new NavigationDrawerItem(CardsView.class, "Cards", MaterialIcon.OUTBOX, "100+"),
+				new NavigationDrawerItem(ChipsView.class, "Chips", MaterialIcon.FAVORITE),
+				new NavigationDrawerItem(DialogsView.class, "Dialogs", MaterialIcon.DELETE),
+				new NavigationDrawerItem(NavigationBarView.class, "Navigation bar", MaterialIcon.CIRCLE),
+				new NavigationDrawerItem(NavigationDrawerView.class, "Navigation drawer", MaterialIcon.CHANGE_HISTORY),
+				new NavigationDrawerItem(NavigationRailView.class, "Navigation rail", MaterialIcon.SQUARE),
+				new NavigationDrawerItem(TopAppBarView.class, "Top app bar", MaterialIcon.CIRCLE)
+		);
 
-        Header header = new Header(toggle, viewTitle);
-        header.addClassNames("bg-base", "border-b", "border-contrast-10", "box-border", "flex", "h-xl", "items-center",
-                "w-full");
-        return header;
-    }
-
-    private Component createDrawerContent() {
-        H2 appName = new H2("My App");
-        appName.addClassNames("flex", "items-center", "h-xl", "m-0", "px-m", "text-m");
-
-        com.vaadin.flow.component.html.Section section = new com.vaadin.flow.component.html.Section(appName,
-                createNavigation(), createFooter());
-        section.addClassNames("flex", "flex-col", "items-stretch", "max-h-full", "min-h-full");
-        return section;
-    }
-
-    private Nav createNavigation() {
-        Nav nav = new Nav();
-        nav.addClassNames("border-b", "border-contrast-10", "flex-grow", "overflow-auto");
-        nav.getElement().setAttribute("aria-labelledby", "views");
-
-        // Wrap the links in a list; improves accessibility
-        UnorderedList list = new UnorderedList();
-        list.addClassNames("list-none", "m-0", "p-0");
-        nav.add(list);
-
-        for (RouterLink link : createLinks()) {
-            ListItem item = new ListItem(link);
-            list.add(item);
-        }
-        return nav;
-    }
-
-    private List<RouterLink> createLinks() {
-        MenuItemInfo[] menuItems = new MenuItemInfo[]{ //
-                new MenuItemInfo("Buttons", "la la-file", ButtonsView.class), //
-
-                new MenuItemInfo("Cards", "la la-file", CardsView.class), //
-
-                new MenuItemInfo("Chips", "la la-file", ChipsView.class), //
-
-                new MenuItemInfo("Dialogs", "la la-file", DialogsView.class), //
-
-                new MenuItemInfo("Navigation bar", "la la-file", NavigationbarView.class), //
-
-                new MenuItemInfo("Navigation drawer", "la la-file", NavigationdrawerView.class), //
-
-                new MenuItemInfo("Navigation rail", "la la-file", NavigationrailView.class), //
-
-                new MenuItemInfo("Top app bar", "la la-file", TopappbarView.class), //
-
-        };
-        List<RouterLink> links = new ArrayList<>();
-        for (MenuItemInfo menuItemInfo : menuItems) {
-            links.add(createLink(menuItemInfo));
-
-        }
-        return links;
-    }
-
-    private static RouterLink createLink(MenuItemInfo menuItemInfo) {
-        RouterLink link = new RouterLink();
-        link.addClassNames("flex", "mx-s", "p-s", "relative", "text-secondary");
-        link.setRoute(menuItemInfo.getView());
-
-        Span icon = new Span();
-        icon.addClassNames("me-s", "text-l");
-        if (!menuItemInfo.getIconClass().isEmpty()) {
-            icon.addClassNames(menuItemInfo.getIconClass());
-        }
-
-        Span text = new Span(menuItemInfo.getText());
-        text.addClassNames("font-medium", "text-s");
-
-        link.add(icon, text);
-        return link;
-    }
-
-    private Footer createFooter() {
-        Footer layout = new Footer();
-        layout.addClassNames("flex", "items-center", "my-s", "px-m", "py-xs");
-
-        return layout;
-    }
-
-    @Override
-    protected void afterNavigation() {
-        super.afterNavigation();
-        viewTitle.setText(getCurrentPageTitle());
-    }
-
-    private String getCurrentPageTitle() {
-        PageTitle title = getContent().getClass().getAnnotation(PageTitle.class);
-        return title == null ? "" : title.value();
-    }
+		Nav nav = new Nav(label, list);
+		nav.getElement().setAttribute("aria-labelledby", COMPONENTS_LABEL);
+		addToDrawer(nav);
+	}
 }

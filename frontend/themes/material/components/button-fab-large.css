@@ -1,0 +1,19 @@
+:host([theme~="fab-large"]) {
+    --background: var(--md-primary-container);
+    --color: var(--md-on-primary-container);
+    --elevation: var(--md-elevation-3);
+    --height: var(--md-button-fab-large-height);
+    --icon-size: var(--md-button-fab-large-icon-size);
+    --padding: var(--md-button-fab-padding);
+    --shape: var(--md-button-fab-large-shape);
+    --width: var(--md-button-fab-large-width);
+
+    --hover-background: var(--md-on-primary-container);
+    --hover-elevation: var(--md-elevation-4);
+    --focus-elevation: var(--md-elevation-3);
+    --pressed-elevation: var(--md-elevation-3);
+}
+
+:host([theme~="fab-large"]) [part='prefix'] ::slotted(.material-icons) {
+    margin: 0;
+}

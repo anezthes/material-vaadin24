@@ -1,0 +1,10 @@
+:host([theme~="elevated"]) {
+    --background: var(--md-surface);
+    --color: var(--md-primary);
+    --elevation: var(--md-elevation-1);
+
+    --hover-background: var(--md-primary);
+    --hover-elevation: var(--md-elevation-2);
+    --focus-elevation: var(--md-elevation-1);
+    --pressed-elevation: var(--md-elevation-1);
+}

@@ -1,0 +1,19 @@
+:host([theme~="fab-small"]) {
+    --background: var(--md-primary-container);
+    --color: var(--md-on-primary-container);
+    --elevation: var(--md-elevation-3);
+    --height: var(--md-button-fab-small-height);
+    --icon-size: var(--md-button-fab-icon-size);
+    --padding: var(--md-button-fab-padding);
+    --shape: var(--md-button-fab-small-shape);
+    --width: var(--md-button-fab-small-width);
+
+    --hover-background: var(--md-on-primary-container);
+    --hover-elevation: var(--md-elevation-4);
+    --focus-elevation: var(--md-elevation-3);
+    --pressed-elevation: var(--md-elevation-3);
+}
+
+:host([theme~="fab-small"]) [part='prefix'] ::slotted(.material-icons) {
+    margin: 0;
+}

@@ -1,0 +1,17 @@
+/* === BACKDROP === */
+[part='backdrop'] {
+    background: var(--md-drawer-scrim-color);
+    opacity: var(--md-drawer-scrim-opacity);
+}
+
+/* === DRAWER === */
+[part="drawer"] {
+    background: var(--md-surface);
+    border-radius: var(--md-drawer-shape);
+    padding: var(--md-drawer-padding);
+    width: var(--md-drawer-width);
+}
+
+:host([overlay]) [part='drawer'] {
+    box-shadow: var(--md-elevation-1);
+}

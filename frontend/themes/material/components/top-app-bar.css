@@ -1,0 +1,25 @@
+.top-app-bar {
+    align-items: center;
+    background: var(--md-surface);
+    display: flex;
+    height: var(--md-top-app-bar-height);
+    padding: 0 var(--md-space-1);
+    width: 100%;
+}
+
+/* Title */
+.top-app-bar h1 {
+    color: var(--md-on-surface);
+    font-size: var(--md-title-large-size);
+    font-weight: var(--md-title-large-weight);
+    letter-spacing: var(--md-title-large-tracking);
+    line-height: var(--md-title-large-line-height);
+}
+
+/* === CENTER-ALIGNED === */
+.top-app-bar.center-aligned h1 {
+    inset: 50% auto auto 50%;
+    margin: 0;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}

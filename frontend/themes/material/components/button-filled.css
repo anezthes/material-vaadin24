@@ -1,0 +1,9 @@
+:host([theme~="filled"]) {
+    --background: var(--md-primary);
+    --color: var(--md-on-primary);
+
+    --hover-background: var(--md-on-primary);
+    --hover-elevation: var(--md-elevation-1);
+    --focus-elevation: none;
+    --pressed-elevation: none;
+}
