@@ -44,6 +44,7 @@ public class MainLayout extends AppLayout {
 
 	private void createAppBar() {
 		topAppBar = new TopAppBar();
+		topAppBar.setType(TopAppBar.Type.SMALL);
 		addToNavbar(topAppBar);
 	}
 

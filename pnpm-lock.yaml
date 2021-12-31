@@ -23,7 +23,7 @@ dependencies:
   '@vaadin/details': 23.0.0-alpha2
   '@vaadin/dialog': 23.0.0-alpha2
   '@vaadin/email-field': 23.0.0-alpha2
-  '@vaadin/field-highlighter': 23.0.0-alpha1
+  '@vaadin/field-highlighter': 23.0.0-alpha2
   '@vaadin/flow-frontend': link:target/flow-frontend
   '@vaadin/form': 0.0.16_lit@2.0.0
   '@vaadin/form-layout': 23.0.0-alpha2
@@ -1869,7 +1869,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-OvcbQNrTbitv4M+NoQh8ifNVc2BxkAmbikW1Q/3ItuNawmlnIZpltDQ1M64qJUk5s30QMeMTENUc7TGByonQSQ==
-  /@vaadin/field-highlighter/23.0.0-alpha1:
+  /@vaadin/field-highlighter/23.0.0-alpha2:
     dependencies:
       '@polymer/iron-a11y-announcer': 3.0.2
       '@polymer/polymer': 3.2.0
@@ -1881,7 +1881,7 @@ packages:
       lit: 2.0.0
     dev: false
     resolution:
-      integrity: sha512-xz/+NOJJn6M7P4djOMJ8Q6Lww/ipNcOVDBp1lSq0ekRJU3MbcBA48V0fQ2Hd7Ul/rqH702WCcHcOOg5gru5w/w==
+      integrity: sha512-cGKhbap6n1frQhoMpSVrO+yBi67xHNTToaIDZ8PUe2FH8TPe66OmOR/N8GOztmkJWFDznshKKpX7tCopFf2jiA==
   /@vaadin/form-layout/23.0.0-alpha2:
     dependencies:
       '@polymer/iron-resizable-behavior': 3.0.1
@@ -8730,7 +8730,7 @@ specifiers:
   '@vaadin/details': 23.0.0-alpha2
   '@vaadin/dialog': 23.0.0-alpha2
   '@vaadin/email-field': 23.0.0-alpha2
-  '@vaadin/field-highlighter': 23.0.0-alpha1
+  '@vaadin/field-highlighter': 23.0.0-alpha2
   '@vaadin/flow-frontend': ./target/flow-frontend
   '@vaadin/form': 0.0.16
   '@vaadin/form-layout': 23.0.0-alpha2

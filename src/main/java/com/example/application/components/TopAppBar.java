@@ -1,13 +1,19 @@
 package com.example.application.components;
 
+import com.example.application.MaterialIcon;
+import com.example.application.componentthemes.ButtonTheme;
 import com.vaadin.flow.component.applayout.DrawerToggle;
+import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.Header;
+import com.vaadin.flow.component.orderedlayout.FlexLayout;
 
 public class TopAppBar extends Header {
 
 	private DrawerToggle navigationIcon;
 	private H1 title;
+	private FlexLayout interactiveIcons;
 
 	public enum Type {
 		CENTER_ALIGNED,
@@ -24,11 +30,15 @@ public class TopAppBar extends Header {
 
 	public TopAppBar() {
 		addClassName("top-app-bar");
-		setType(Type.CENTER_ALIGNED);
 
 		navigationIcon = new DrawerToggle();
 		title = new H1("Title");
-		add(navigationIcon, title);
+		interactiveIcons = new FlexLayout();
+		interactiveIcons.addClassNames("interactive-icons");
+
+		add(navigationIcon, title, interactiveIcons);
+
+		setType(Type.CENTER_ALIGNED);
 	}
 
 	public void setType(Type type) {
@@ -37,6 +47,18 @@ public class TopAppBar extends Header {
 		}
 		addClassName(type.getClassName());
 		this.type = type;
+
+		/* Demo purposes */
+		interactiveIcons.removeAll();
+		if (this.type.equals(Type.CENTER_ALIGNED)) {
+			Button account = new Button(MaterialIcon.ACCOUNT_CIRCLE.create());
+			interactiveIcons.add(account);
+		} else {
+			Button attach = new Button(MaterialIcon.ATTACH_FILE.create());
+			Button event = new Button(MaterialIcon.EVENT.create());
+			Button more = new Button(MaterialIcon.MORE_VERT.create());
+			interactiveIcons.add(attach, event, more);
+		}
 	}
 
 }

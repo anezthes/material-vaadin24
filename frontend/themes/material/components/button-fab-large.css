@@ -13,7 +13,3 @@
     --focus-elevation: var(--md-elevation-3);
     --pressed-elevation: var(--md-elevation-3);
 }
-
-:host([theme~="fab-large"]) [part='prefix'] ::slotted(.material-icons) {
-    margin: 0;
-}

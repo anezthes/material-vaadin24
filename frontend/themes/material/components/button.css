@@ -74,6 +74,9 @@
     /* Need has-prefix/has-suffix to skip this */
     margin-inline-start: calc(var(--padding-between-elements) * -1);
 }
+:host([theme~="icon"]) [part='prefix'] ::slotted(.material-icons) {
+    margin: 0;
+}
 
 /* Background (::before) & states (::after) */
 :host::before,
