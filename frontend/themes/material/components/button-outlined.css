@@ -1,6 +1,6 @@
 :host([theme~="outlined"]) {
     --color: var(--md-primary);
-    --outline: var(--md-button-outline-width) solid var(--md-outline);
+    --outline: 1px solid var(--md-outline);
 
     --disabled-background: none;
     --disabled-outline-color: var(--md-on-surface);

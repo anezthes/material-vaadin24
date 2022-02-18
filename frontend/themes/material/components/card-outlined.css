@@ -1,0 +1,32 @@
+.card[theme~="outlined"] {
+    background-color: var(--md-surface);
+}
+
+.card[theme~="outlined"]::before {
+    border: 1px solid var(--md-outline);
+    border-radius: inherit;
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+}
+
+/* States (::after) */
+.card[theme~="outlined"]::after {
+    background: var(--md-on-surface);
+}
+
+/* Hover */
+.card[theme~="outlined"]:hover::after {
+    opacity: var(--md-hover-opacity);
+}
+
+/* Focus */
+.card[theme~="outlined"]:focus::after {
+    opacity: var(--md-focus-opacity);
+}
+
+/* Active */
+.card[theme~="outlined"]:active::after {
+    opacity: var(--md-pressed-opacity);
+}

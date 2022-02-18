@@ -4,25 +4,34 @@ html {
     --md-on-primary: var(--md-primary-100);
     --md-primary-container: var(--md-primary-90);
     --md-on-primary-container: var(--md-primary-10);
+
     --md-secondary: var(--md-secondary-40);
     --md-on-secondary: var(--md-secondary-100);
     --md-secondary-container: var(--md-secondary-90);
     --md-on-secondary-container: var(--md-secondary-10);
+
     --md-tertiary: var(--md-tertiary-40);
     --md-on-tertiary: var(--md-tertiary-100);
     --md-tertiary-container: var(--md-tertiary-90);
     --md-on-tertiary-container: var(--md-tertiary-10);
+
     --md-error: var(--md-error-40);
     --md-error-container: var(--md-error-90);
     --md-on-error: var(--md-error-100);
     --md-on-error-container: var(--md-error-10);
+
     --md-background: var(--md-neutral-99);
     --md-on-background: var(--md-neutral-10);
+
     --md-surface: var(--md-neutral-99);
     --md-on-surface: var(--md-neutral-10);
     --md-surface-variant: var(--md-neutral-variant-90);
     --md-on-surface-variant: var(--md-neutral-variant-30);
+
     --md-outline: var(--md-neutral-variant-50);
+
+    --md-surface-tint-color: var(--md-primary);
+
     --md-inverse-surface: var(--md-neutral-20);
     --md-inverse-on-surface: var(--md-neutral-95);
     --md-inverse-primary: var(--md-primary-80);
@@ -122,25 +131,34 @@ html {
     --md-on-primary: var(--md-primary-20);
     --md-primary-container: var(--md-primary-30);
     --md-on-primary-container: var(--md-primary-90);
+
     --md-secondary: var(--md-secondary-80);
     --md-on-secondary: var(--md-secondary-20);
     --md-secondary-container: var(--md-secondary-30);
     --md-on-secondary-container: var(--md-secondary-90);
+
     --md-tertiary: var(--md-tertiary-80);
     --md-on-tertiary: var(--md-tertiary-20);
     --md-tertiary-container: var(--md-tertiary-30);
     --md-on-tertiary-container: var(--md-tertiary-90);
+
     --md-error: var(--md-error-80);
     --md-error-container: var(--md-error-30);
     --md-on-error: var(--md-error-20);
     --md-on-error-container: var(--md-error-80);
+
     --md-background: var(--md-neutral-10);
     --md-on-background: var(--md-neutral-90);
+
     --md-surface: var(--md-neutral-10);
     --md-on-surface: var(--md-neutral-90);
     --md-surface-variant: var(--md-neutral-variant-30);
     --md-on-surface-variant: var(--md-neutral-variant-80);
+
     --md-outline: var(--md-neutral-variant-60);
+
+    --md-surface-tint-color: var(--md-primary);
+
     --md-inverse-surface: var(--md-neutral-90);
     --md-inverse-on-surface: var(--md-neutral-20);
     --md-inverse-primary: var(--md-primary-40);

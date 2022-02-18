@@ -1,5 +1,5 @@
 .top-app-bar.center-aligned {
-    --height: var(--md-top-app-bar-center-aligned-height);
+    --height: 64px;
     --padding: 0 var(--md-space-1);
 
     --headline-line-height: var(--md-title-large-line-height);

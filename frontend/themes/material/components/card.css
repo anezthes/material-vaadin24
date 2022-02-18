@@ -1,0 +1,27 @@
+.card {
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+/* States (::after) */
+.card::after {
+    border-radius: inherit;
+    content: "";
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+}
+
+/* Media */
+.card > img {
+    border-radius: inherit;
+    max-width: 100%;
+}
+
+.card > vaadin-button {
+    align-self: flex-start;
+}

@@ -1,10 +1,8 @@
 package com.example.application.components;
 
 import com.example.application.MaterialIcon;
-import com.example.application.componentthemes.ButtonTheme;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.Header;
 import com.vaadin.flow.component.orderedlayout.FlexLayout;
@@ -14,18 +12,6 @@ public class TopAppBar extends Header {
 	private DrawerToggle navigationIcon;
 	private H1 title;
 	private FlexLayout interactiveIcons;
-
-	public enum Type {
-		CENTER_ALIGNED,
-		SMALL,
-		MEDIUM,
-		LARGE;
-
-		public String getClassName() {
-			return name().toLowerCase().replace("_", "-");
-		}
-	}
-
 	private Type type;
 
 	public TopAppBar() {
@@ -58,6 +44,17 @@ public class TopAppBar extends Header {
 			Button event = new Button(MaterialIcon.EVENT.create());
 			Button more = new Button(MaterialIcon.MORE_VERT.create());
 			interactiveIcons.add(attach, event, more);
+		}
+	}
+
+	public enum Type {
+		CENTER_ALIGNED,
+		SMALL,
+		MEDIUM,
+		LARGE;
+
+		public String getClassName() {
+			return name().toLowerCase().replace("_", "-");
 		}
 	}
 

@@ -1,5 +1,5 @@
 .top-app-bar.medium {
-    --height: var(--md-top-app-bar-medium-height);
+    --height: 112px;
     --padding: var(--md-space-2) var(--md-space-1) var(--md-space-5) var(--md-space-1);
 
     --headline-line-height: var(--md-headline-small-line-height);

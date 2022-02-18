@@ -1,0 +1,32 @@
+.card[theme~="filled"] {
+    background-color: var(--md-surface-variant);
+}
+
+/* States (::after) */
+.card[theme~="filled"]::after {
+    background: var(--md-on-surface);
+}
+
+/* Hover */
+.card[theme~="filled"]:hover {
+    box-shadow: var(--md-elevation-1);
+}
+.card[theme~="filled"]:hover::after {
+    opacity: var(--md-hover-opacity);
+}
+
+/* Focus */
+.card[theme~="filled"]:focus {
+    box-shadow: none;
+}
+.card[theme~="filled"]:focus::after {
+    opacity: var(--md-focus-opacity);
+}
+
+/* Active */
+.card[theme~="filled"]:active {
+    box-shadow: none;
+}
+.card[theme~="filled"]:active::after {
+    opacity: var(--md-pressed-opacity);
+}

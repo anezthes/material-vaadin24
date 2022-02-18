@@ -3,7 +3,6 @@ package com.example.application.views;
 import com.example.application.utilityclasses.Margin;
 import com.example.application.utilityclasses.Padding;
 import com.example.application.utilityclasses.Typography;
-import com.example.application.views.MainLayout;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Main;
 import com.vaadin.flow.router.PageTitle;

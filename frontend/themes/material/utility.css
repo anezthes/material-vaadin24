@@ -3,6 +3,9 @@
 .grid { display: grid; }
 .inline-grid { display: inline-grid; }
 
+/* === FLEX DIRECTION ===*/
+.flex-col { flex-direction: column; }
+
 /* === GAP ===*/
 .gap-1 { gap: var(--md-space-1); }
 .gap-2 { gap: var(--md-space-2); }

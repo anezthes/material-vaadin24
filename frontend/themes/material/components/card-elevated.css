@@ -1,0 +1,33 @@
+.card[theme~="elevated"] {
+    background-color: var(--md-surface);
+    box-shadow: var(--md-elevation-1);
+}
+
+/* States (::after) */
+.card[theme~="elevated"]::after {
+    background: var(--md-on-surface);
+}
+
+/* Hover */
+.card[theme~="elevated"]:hover {
+    box-shadow: var(--md-elevation-2);
+}
+.card[theme~="elevated"]:hover::after {
+    opacity: var(--md-hover-opacity);
+}
+
+/* Focus */
+.card[theme~="elevated"]:focus {
+    box-shadow: var(--md-elevation-1);
+}
+.card[theme~="elevated"]:focus::after {
+    opacity: var(--md-focus-opacity);
+}
+
+/* Active */
+.card[theme~="elevated"]:active {
+    box-shadow: var(--md-elevation-1);
+}
+.card[theme~="elevated"]:active::after {
+    opacity: var(--md-pressed-opacity);
+}

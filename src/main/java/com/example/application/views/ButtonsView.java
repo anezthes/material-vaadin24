@@ -1,9 +1,8 @@
 package com.example.application.views;
 
-import com.example.application.componentthemes.ButtonTheme;
 import com.example.application.MaterialIcon;
+import com.example.application.componentthemes.ButtonTheme;
 import com.example.application.utilityclasses.*;
-import com.example.application.views.MainLayout;
 import com.vaadin.flow.component.HasComponents;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Div;
@@ -56,13 +55,13 @@ public class ButtonsView extends Main {
 
 	private H3 createH3(String text) {
 		H3 h3 = new H3(text);
-		h3.addClassNames(Typography.Body.M, Margin.Bottom._0, Margin.Top._8);
+		h3.addClassNames(Typography.Body.M, Margin.Bottom._4, Margin.Top._8);
 		return h3;
 	}
 
 	private void addButtons(String theme) {
 		Div buttons = new Div();
-		buttons.addClassNames(Display.FLEX, Gap._4, Padding._4);
+		buttons.addClassNames(Display.FLEX, Gap._4);
 		add(buttons);
 
 		if (theme.equals(ButtonTheme.FAB) || theme.equals(ButtonTheme.FAB_SMALL) || theme.equals(ButtonTheme.FAB_LARGE)) {

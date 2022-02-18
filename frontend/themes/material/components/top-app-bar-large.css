@@ -1,5 +1,5 @@
 .top-app-bar.large {
-    --height: var(--md-top-app-bar-large-height);
+    --height: 152px;
     --padding: var(--md-space-2) var(--md-space-1) var(--md-space-6) var(--md-space-1);
 
     --headline-line-height: var(--md-headline-medium-line-height);

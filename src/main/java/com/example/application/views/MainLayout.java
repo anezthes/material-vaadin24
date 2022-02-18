@@ -1,8 +1,8 @@
 package com.example.application.views;
 
+import com.example.application.MaterialIcon;
 import com.example.application.components.NavigationDrawerItem;
 import com.example.application.components.TopAppBar;
-import com.example.application.MaterialIcon;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.dependency.StyleSheet;
@@ -63,7 +63,7 @@ public class MainLayout extends AppLayout {
 		UnorderedList list = new UnorderedList();
 		list.add(
 				new NavigationDrawerItem(ColorView.class, "Color", MaterialIcon.PALETTE),
-                new NavigationDrawerItem(TypographyView.class, "Typography", MaterialIcon.ABC)
+				new NavigationDrawerItem(TypographyView.class, "Typography", MaterialIcon.ABC)
 		);
 
 		Nav nav = new Nav(label, list);

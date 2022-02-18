@@ -1,3 +1,7 @@
+@import url('./components/card.css');
+@import url('./components/card-elevated.css');
+@import url('./components/card-filled.css');
+@import url('./components/card-outlined.css');
 @import url('./components/navigation-drawer.css');
 @import url('./components/navigation-drawer-item.css');
 @import url('./components/top-app-bar-center-aligned.css');
@@ -15,39 +19,6 @@ html {
     background: var(--md-surface);
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-
-    /* === BUTTON === */
-    --md-button-height: 40px;
-    --md-button-icon-size: 18px;
-    --md-button-outline-width: 1px;
-    --md-button-padding: 0 24px;
-    --md-button-padding-between-elements: 8px;
-    --md-button-padding-with-icon: 0 24px 0 16px;
-    --md-button-shape: 20px;
-
-    --md-button-text-min-width: 48px;
-    --md-button-text-padding: 0 12px;
-    --md-button-text-padding-with-icon: 0 16px 0 12px;
-
-    --md-button-fab-height: 56px;
-    --md-button-fab-icon-size: 24px;
-    --md-button-fab-padding: 0;
-    --md-button-fab-shape: 16px;
-    --md-button-fab-width: 56px;
-
-    --md-button-fab-small-height: 40px;
-    --md-button-fab-small-shape: 12px;
-    --md-button-fab-small-width: 40px;
-
-    --md-button-fab-large-height: 96px;
-    --md-button-fab-large-icon-size: 36px;
-    --md-button-fab-large-shape: 28px;
-    --md-button-fab-large-width: 96px;
-
-    --md-button-fab-extended-min-width: 80px;
-    --md-button-fab-extended-padding: 0 20px;
-    --md-button-fab-extended-padding-between-elements: 12px;
-    --md-button-fab-extended-padding-with-icon: 0 20px 0 16px;
 
     /* === DRAWER === */
     --md-drawer-padding: 12px;
@@ -72,10 +43,5 @@ html {
     --md-top-app-bar-icon-size: 24px;
     --md-top-app-bar-target-size: 48px;
     --md-top-app-bar-avatar-size: 30px;
-
-    --md-top-app-bar-center-aligned-height: 64px;
-    --md-top-app-bar-small-height: 64px;
-    --md-top-app-bar-medium-height: 112px;
-    --md-top-app-bar-large-height: 152px;
 
 }
