@@ -52,7 +52,9 @@ public class CardsView extends Main {
 	private void addCardExamples() {
 		Div cards = new Div(
 			createCardExample1(CardTheme.ELEVATED),
-			createCardExample2(CardTheme.OUTLINED)
+			createCardExample2(CardTheme.OUTLINED),
+			createCardExample3(CardTheme.ELEVATED),
+			createCardExample4(CardTheme.FILLED)
 		);
 		cards.addClassNames(Display.FLEX, FlexDirection.COLUMN, Gap._4);
 		add(cards);
@@ -91,13 +93,16 @@ public class CardsView extends Main {
 		headline.addClassNames(Typography.Display.M);
 
 		Span subhead = new Span("Subhead");
-		subhead.addClassNames(Typography.Title.M);
+		subhead.addClassNames(Typography.Headline.S);
 
-		Span supportingText = new Span("Supporting text");
+		Span supportingText = new Span("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.");
 		supportingText.addClassNames(Typography.Body.M);
 
 		Div text = new Div(headline, subhead, supportingText);
-		text.addClassNames(Display.FLEX, FlexDirection.COLUMN, Gap._1, Padding.Bottom._2, Padding.Horizontal._4, Padding.Top._6);
+		text.addClassNames(
+				Display.FLEX, FlexDirection.COLUMN, Gap._3,
+				Padding.Bottom._4, Padding.Horizontal._6, Padding.Top._6
+		);
 
 		Button button1 = new Button("Button");
 		button1.addThemeName(ButtonTheme.OUTLINED);
@@ -106,11 +111,63 @@ public class CardsView extends Main {
 		button2.addThemeName(ButtonTheme.FILLED);
 
 		Div buttons = new Div(button1, button2);
-		buttons.addClassNames(Display.FLEX, Gap._2, Padding._4);
+		buttons.addClassNames(JustifyContent.END, Display.FLEX, Gap._2, Padding._4);
 
 		Card card = new Card(image, text, buttons);
 		card.addThemeName(theme);
 		card.setWidth(506, Unit.PIXELS);
+		return card;
+	}
+
+	private Card createCardExample3(String theme) {
+		Image image = new Image("https://images.unsplash.com/photo-1506744038136-46273834b3fb", "Photo of Yosemite Valley, United States by Bailey Zindel");
+		image.setHeight(218, Unit.PIXELS);
+
+		Span headline = new Span("Headline");
+		headline.addClassNames(Typography.Headline.S);
+
+		Span subhead = new Span("Subhead");
+		subhead.addClassNames(Margin.Bottom._1, Margin.Top._2);
+
+		Span supportingText = new Span("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.");
+		supportingText.addClassNames(Typography.Body.S);
+
+		Div text = new Div(headline, subhead, supportingText);
+		text.addClassNames(
+				Display.FLEX, FlexDirection.COLUMN,
+				Padding.Bottom._5, Padding.Horizontal._3, Padding.Top._4
+		);
+
+		Card card = new Card(image, text);
+		card.addThemeName(theme);
+		card.setWidth(360, Unit.PIXELS);
+		return card;
+	}
+
+	private Card createCardExample4(String theme) {
+		Span headline = new Span("Headline");
+		headline.addClassNames(Typography.Headline.S);
+
+		Span supportingText = new Span("Supporting text");
+		supportingText.addClassNames(Typography.Body.M);
+
+		Div text = new Div(headline, supportingText);
+		text.addClassNames(
+				Display.FLEX, FlexDirection.COLUMN,
+				Padding._4
+		);
+
+		Button button = new Button("Button");
+		button.addThemeName(ButtonTheme.FILLED);
+
+		Div buttons = new Div(button);
+		buttons.addClassNames(Display.FLEX, Gap._2, Padding._4);
+
+		Card card = new Card(text, buttons);
+		card.addClassNames(JustifyContent.BETWEEN);
+		card.addThemeName(theme);
+		card.setHeight(168, Unit.PIXELS);
+		card.setWidth(360, Unit.PIXELS);
 		return card;
 	}
 
