@@ -54,7 +54,8 @@ public class CardsView extends Main {
 			createCardExample1(CardTheme.ELEVATED),
 			createCardExample2(CardTheme.OUTLINED),
 			createCardExample3(CardTheme.ELEVATED),
-			createCardExample4(CardTheme.FILLED)
+			createCardExample4(CardTheme.FILLED),
+			createCardExample5(CardTheme.OUTLINED)
 		);
 		cards.addClassNames(Display.FLEX, FlexDirection.COLUMN, Gap._4);
 		add(cards);
@@ -167,6 +168,38 @@ public class CardsView extends Main {
 		card.addClassNames(JustifyContent.BETWEEN);
 		card.addThemeName(theme);
 		card.setHeight(168, Unit.PIXELS);
+		card.setWidth(360, Unit.PIXELS);
+		return card;
+	}
+
+	private Card createCardExample5(String... themes) {
+		Span headline = new Span("Headline");
+		headline.addClassNames(Typography.Display.S);
+
+		Span subhead = new Span("Subhead");
+		subhead.addClassNames(Margin.Top._1, Typography.Title.M);
+
+		Span supportingText = new Span("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.");
+		supportingText.addClassNames(Typography.Body.M);
+
+		Div text = new Div(headline, subhead, supportingText);
+		text.addClassNames(
+				Display.FLEX, FlexDirection.COLUMN, Gap._1,
+				Padding.Bottom._10, Padding.Horizontal._4, Padding.Top._9
+		);
+
+		Image image = new Image("https://images.unsplash.com/photo-1451187580459-43490279c0fa", "Photo of Gulf of Mexico, United States by NASA");
+		image.addClassNames(Margin.Horizontal._4);
+
+		Button button = new Button("Button");
+		button.addThemeName(ButtonTheme.FILLED);
+
+		Div buttons = new Div(button);
+		buttons.addClassNames(Display.FLEX, Gap._2, JustifyContent.END, Padding._4);
+
+		Card card = new Card(text, image, buttons);
+		card.addClassNames(JustifyContent.BETWEEN);
+		card.addThemeNames(themes);
 		card.setWidth(360, Unit.PIXELS);
 		return card;
 	}

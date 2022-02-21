@@ -66,7 +66,7 @@ html {
     --md-label-medium-tracking: 0.5px;
     --md-label-medium-weight: var(--md-weight-medium);
 
-    --md-label-small-line-height: 6px;
+    --md-label-small-line-height: 16px;
     --md-label-small-size: 11px;
     --md-label-small-tracking: 0.5px;
     --md-label-small-weight: var(--md-weight-medium);
