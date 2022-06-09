@@ -1,18 +1,43 @@
+:host {
+    position: relative;
+}
+
 ::slotted(input) {
     text-overflow: ellipsis;
 }
 
 :host([theme~="filled"]) {
-    background-color: var(--md-surface-variant);
-    border-radius: var(--shape);
-    box-shadow: var(--indicator);
     box-sizing: border-box;
     height: var(--height);
     padding: var(--padding);
 }
 
+/* Background */
+:host([theme~="filled"])::before {
+    background-color: var(--background);
+    border-radius: var(--shape);
+    content: "";
+    inset: 0;
+    opacity: var(--opacity);
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+}
+
+/* Indicator */
+:host([theme~="filled"])::after {
+    box-shadow: var(--indicator);
+    content: "";
+    inset: 0;
+    opacity: var(--indicator-opacity);
+    pointer-events: none;
+    position: absolute;
+}
+
+/* Input */
 :host([theme~="filled"]) ::slotted(input) {
     caret-color: var(--md-primary);
+    color: var(--md-on-surface);
     font-size: var(--md-body-large-size);
     font-weight: var(--md-body-large-weight);
     letter-spacing: var(--md-body-large-tracking);

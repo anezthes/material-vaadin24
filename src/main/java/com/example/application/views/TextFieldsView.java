@@ -1,16 +1,10 @@
 package com.example.application.views;
 
 import com.example.application.MaterialIcon;
-import com.example.application.components.AssistChip;
-import com.example.application.components.FilledTextField;
-import com.example.application.componentthemes.ChipTheme;
+import com.example.application.components.MDTextField;
 import com.example.application.componentthemes.TextFieldTheme;
 import com.example.application.utilityclasses.*;
-import com.vaadin.flow.component.HasComponents;
-import com.vaadin.flow.component.html.Div;
-import com.vaadin.flow.component.html.H2;
-import com.vaadin.flow.component.html.H3;
-import com.vaadin.flow.component.html.Main;
+import com.vaadin.flow.component.html.*;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
@@ -27,9 +21,10 @@ public class TextFieldsView extends Main {
 		add(title);
 
 		add(createH3("Filled"));
-		addTextFields();
+		addTextFields(TextFieldTheme.FILLED);
 
 		add(createH3("Outlined"));
+		addTextFields(TextFieldTheme.OUTLINED);
 	}
 
 	private H3 createH3(String text) {
@@ -38,26 +33,51 @@ public class TextFieldsView extends Main {
 		return h3;
 	}
 
-	private void addTextFields() {
+	private void addTextFields(String theme) {
 		Div fields = new Div();
 		fields.addClassNames(Display.FLEX, FlexWrap.WRAP, Gap._4);
 		add(fields);
 
-		TextField field = new FilledTextField("Label text");
+		TextField field = new MDTextField("Label text");
+		field.addThemeName(theme);
+		field.setHelperText("Supporting text");
 		fields.add(field);
 
-		field = new FilledTextField("Label text");
+		field = new MDTextField("Label text");
+		field.addThemeName(theme);
+		field.setHelperText("Supporting text");
 		field.setValue("Input text");
 		fields.add(field);
 
-		field = new FilledTextField("Label text");
+		field = new MDTextField("Label text");
+		field.addThemeName(theme);
+		field.setHelperText("Supporting text");
 		field.setPrefixComponent(MaterialIcon.SEARCH.create());
 		fields.add(field);
 
-		field = new FilledTextField("Label text");
+		field = new MDTextField("Label text");
+		field.addThemeName(theme);
 		field.setClearButtonVisible(true);
+		field.setHelperText("Supporting text");
 		field.setPrefixComponent(MaterialIcon.SEARCH.create());
 		field.setValue("Input text");
+		fields.add(field);
+
+		field = new MDTextField("Label text");
+		field.addThemeName(theme);
+		field.setPrefixComponent(new Span("$"));
+		field.setValue("1.43");
+		fields.add(field);
+
+		field = new MDTextField("Label text");
+		field.addThemeName(theme);
+		field.setSuffixComponent(new Span("lbs"));
+		field.setValue("143");
+		fields.add(field);
+
+		field = new MDTextField("Label text");
+		field.addThemeName(theme);
+		field.setEnabled(false);
 		fields.add(field);
 	}
 

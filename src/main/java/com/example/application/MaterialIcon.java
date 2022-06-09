@@ -2093,12 +2093,14 @@ public enum MaterialIcon {
 	ZOOM_OUT,
 	ZOOM_OUT_MAP;
 
+	public static final String MATERIAL_ICONS = "material-icons";
+
 	public Span create(String... classNames) {
 		Span icon = new Span(
 				(this.name().startsWith("_") ? this.name().substring(1) : this.name())
 						.toLowerCase()
 		);
-		icon.addClassName("material-icons");
+		icon.addClassName(MATERIAL_ICONS);
 		icon.addClassNames(classNames);
 		return icon;
 	}
