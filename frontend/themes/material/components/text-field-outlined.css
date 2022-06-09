@@ -1,0 +1,49 @@
+:host([theme~="outlined"]) {
+    --indicator: inset 0 0 0 1px var(--md-outline);
+    --padding: 16px;
+    --shape: 4px;
+}
+
+:host([theme~="outlined"][leading-icon]) {
+    --padding: 16px 16px 16px var(--leading-icon-offset);
+}
+
+:host([theme~="outlined"][clear-button-visible]) {
+    --padding: 16px var(--trailing-icon-offset) 16px 16px;
+}
+
+:host([theme~="outlined"][leading-icon][clear-button-visible]) {
+    --padding: 16px var(--trailing-icon-offset) 16px var(--leading-icon-offset);
+}
+
+/* Label */
+:host([theme~="outlined"][focused]) [part='label'],
+:host([theme~="outlined"][has-value]) [part='label'],
+:host([theme~="outlined"][prefix]) [part='label'],
+:host([theme~="outlined"][suffix]) [part='label'] {
+    background: var(--md-surface);
+    left: 12px;
+    padding: 0 4px;
+    top: -8px;
+    z-index: 1;
+}
+
+/* Hover */
+:host([theme~="outlined"]):hover {
+    --indicator: inset 0 0 0 1px var(--md-on-surface);
+}
+
+:host([theme~="outlined"]):hover [part='label'] {
+    color: var(--md-on-surface);
+}
+
+/* Focus */
+:host([theme~="outlined"][focused]) {
+    --indicator: inset 0 0 0 2px var(--md-primary);
+}
+
+/* Disabled */
+:host([theme~="outlined"][disabled]) {
+    --indicator: inset 0 0 0 1px var(--md-on-surface);
+    --indicator-opacity: 0.12;
+}

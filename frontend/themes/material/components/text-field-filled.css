@@ -1,7 +1,5 @@
 :host([theme~="filled"]) {
     --background: var(--md-surface-variant);
-    --height: 56px;
-    --helper-padding: 4px 16px 0 16px;
     --hover-background: var(--md-on-surface);
     --hover-opacity: var(--md-hover-opacity);
     --indicator: inset 0 -1px 0 0 var(--md-on-surface-variant);
@@ -11,8 +9,6 @@
     --opacity: 1;
     --padding: 24px 16px 8px 16px;
     --shape: 4px 4px 0 0;
-    --trailing-icon-size: 24px;
-    --trailing-icon-offset: 52px;
 }
 
 :host([theme~="filled"][leading-icon]) {
@@ -28,84 +24,11 @@
 }
 
 /* Label */
-:host([theme~="filled"]) [part='label'] {
-    color: var(--md-on-surface-variant);
-    font-size: var(--md-body-large-size);
-    font-weight: var(--md-body-large-weight);
-    left: 16px;
-    letter-spacing: var(--md-body-large-tracking);
-    line-height: var(--md-body-large-line-height);
-    pointer-events: none;
-    position: absolute;
-    top: calc((var(--height) - var(--md-body-large-line-height)) / 2);
-}
-
-:host([theme~="filled"][leading-icon]) [part='label'] {
-    left: var(--leading-icon-offset);
-}
-
 :host([theme~="filled"][focused]) [part='label'],
 :host([theme~="filled"][has-value]) [part='label'],
 :host([theme~="filled"][prefix]) [part='label'],
 :host([theme~="filled"][suffix]) [part='label'] {
-    font-size: var(--md-body-small-size);
-    line-height: var(--md-body-small-line-height);
     top: 8px;
-}
-
-/* Prefix */
-:host([theme~="filled"]) slot[name='prefix'] {
-    color: var(--md-on-surface-variant);
-}
-
-:host([theme~="filled"][leading-icon]) slot[name='prefix'] {
-    display: flex;
-    left: 12px;
-    position: absolute;
-    top: calc((var(--height) - var(--leading-icon-size)) / 2);
-}
-
-:host([theme~="filled"][leading-icon]) slot[name='prefix']::slotted(.material-icons) {
-    font-size: var(--leading-icon-size) !important;
-}
-
-/* Suffix */
-:host([theme~="filled"]) slot[name='suffix'] {
-    color: var(--md-on-surface-variant);
-}
-
-/* Clear button */
-:host([theme~="filled"]) [part='clear-button'] {
-    color: var(--md-on-surface-variant);
-    direction: ltr;
-    font-family: 'Material Icons';
-    font-size: var(--trailing-icon-size);
-    font-style: normal;
-    font-weight: normal;
-    letter-spacing: normal;
-    line-height: 1;
-    text-transform: none;
-    white-space: nowrap;
-    word-wrap: normal;
-    position: absolute;
-    right: 12px;
-    top: calc((var(--height) - var(--trailing-icon-size)) / 2);
-    -webkit-font-feature-settings: 'liga';
-    -webkit-font-smoothing: antialiased;
-}
-
-:host([theme~="filled"]) [part='clear-button']::before {
-    content: "highlight_off";
-}
-
-/* Helper text */
-:host([theme~="filled"][has-helper]) [part='helper-text'] {
-    color: var(--md-on-surface-variant);
-    font-size: var(--md-body-small-size);
-    font-weight: var(--md-body-small-weight);
-    letter-spacing: var(--md-body-small-tracking);
-    line-height: var(--md-body-small-line-height);
-    padding: var(--helper-padding);
 }
 
 /* Hover */
@@ -116,12 +39,12 @@
     position: absolute;
 }
 
-:host([theme~="filled"]:not([disabled]):hover) slot[name='input']::before {
+:host([theme~="filled"]):hover slot[name='input']::before {
     background: var(--hover-background);
     opacity: var(--hover-opacity);
 }
 
-:host([theme~="filled"]:not([disabled]):hover) {
+:host([theme~="filled"]):hover {
     --indicator: inset 0 -1px 0 0 var(--md-on-surface);
 }
 
@@ -130,23 +53,10 @@
     --indicator: inset 0 -2px 0 0 var(--md-primary);
 }
 
-:host([theme~="filled"][focused]) [part='label'] {
-    color: var(--md-primary);
-}
-
 /* Disabled */
 :host([theme~="filled"][disabled]) {
     --background: var(--md-on-surface);
     --indicator: inset 0 -1px 0 0 var(--md-on-surface);
     --indicator-opacity: 0.38;
     --opacity: 0.04;
-}
-
-:host([theme~="filled"][disabled]) [part='label'],
-:host([theme~="filled"][disabled]) [part='prefix'],
-:host([theme~="filled"][disabled]) [part='suffix'],
-:host([theme~="filled"][disabled]) [part='clear-button'],
-:host([theme~="filled"][disabled]) [part='helper-text'] {
-    color: var(--md-on-surface);
-    opacity: var(--md-disabled-content-opacity);
 }

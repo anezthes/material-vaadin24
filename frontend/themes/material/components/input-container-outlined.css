@@ -1,0 +1,9 @@
+:host([theme~="outlined"])::after {
+    border-radius: var(--shape);
+    box-shadow: var(--indicator);
+    content: "";
+    inset: 0;
+    opacity: var(--indicator-opacity);
+    pointer-events: none;
+    position: absolute;
+}

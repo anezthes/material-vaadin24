@@ -1,0 +1,21 @@
+/* Background */
+:host([theme~="filled"])::before {
+    background-color: var(--background);
+    border-radius: var(--shape);
+    content: "";
+    inset: 0;
+    opacity: var(--opacity);
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+}
+
+/* Indicator */
+:host([theme~="filled"])::after {
+    box-shadow: var(--indicator);
+    content: "";
+    inset: 0;
+    opacity: var(--indicator-opacity);
+    pointer-events: none;
+    position: absolute;
+}

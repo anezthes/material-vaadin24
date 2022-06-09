@@ -1,6 +1,109 @@
 @import "text-field-filled.css";
 @import "text-field-outlined.css";
 
+:host {
+    --height: 56px;
+    --helper-padding: 4px 16px 0 16px;
+    --leading-icon-size: 24px;
+    --leading-icon-offset: 52px;
+    --trailing-icon-size: 24px;
+    --trailing-icon-offset: 52px;
+}
+
 .vaadin-field-container {
     position: relative;
+}
+
+/* Label */
+:host [part='label'] {
+    color: var(--md-on-surface-variant);
+    font-size: var(--md-body-large-size);
+    font-weight: var(--md-body-large-weight);
+    left: 16px;
+    letter-spacing: var(--md-body-large-tracking);
+    line-height: var(--md-body-large-line-height);
+    pointer-events: none;
+    position: absolute;
+    top: calc((var(--height) - var(--md-body-large-line-height)) / 2);
+}
+
+:host([leading-icon]) [part='label'] {
+    left: var(--leading-icon-offset);
+}
+
+:host([focused]) [part='label'],
+:host([has-value]) [part='label'],
+:host([prefix]) [part='label'],
+:host([suffix]) [part='label'] {
+    font-size: var(--md-body-small-size);
+    line-height: var(--md-body-small-line-height);
+}
+
+/* Prefix */
+slot[name='prefix'] {
+    color: var(--md-on-surface-variant);
+}
+
+:host([leading-icon]) slot[name='prefix'] {
+    display: flex;
+    left: 12px;
+    position: absolute;
+    top: calc((var(--height) - var(--leading-icon-size)) / 2);
+}
+
+:host([leading-icon]) slot[name='prefix']::slotted(.material-icons) {
+    font-size: var(--leading-icon-size) !important;
+}
+
+/* Suffix */
+slot[name='suffix'] {
+    color: var(--md-on-surface-variant);
+}
+
+/* Clear button */
+[part='clear-button'] {
+    color: var(--md-on-surface-variant);
+    direction: ltr;
+    font-family: 'Material Icons';
+    font-size: var(--trailing-icon-size);
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    position: absolute;
+    right: 12px;
+    top: calc((var(--height) - var(--trailing-icon-size)) / 2);
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+[part='clear-button']::before {
+    content: "highlight_off";
+}
+
+/* Helper text */
+:host([has-helper]) [part='helper-text'] {
+    color: var(--md-on-surface-variant);
+    font-size: var(--md-body-small-size);
+    font-weight: var(--md-body-small-weight);
+    letter-spacing: var(--md-body-small-tracking);
+    line-height: var(--md-body-small-line-height);
+    padding: var(--helper-padding);
+}
+
+/* Focus */
+:host([focused]) [part='label'] {
+    color: var(--md-primary);
+}
+
+:host([disabled]) [part='label'],
+:host([disabled]) [part='prefix'],
+:host([disabled]) [part='suffix'],
+:host([disabled]) [part='clear-button'],
+:host([disabled]) [part='helper-text'] {
+    color: var(--md-on-surface);
+    opacity: var(--md-disabled-content-opacity);
 }
