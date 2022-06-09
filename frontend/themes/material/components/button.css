@@ -10,7 +10,7 @@
 
 :host {
     --background: none;
-    --color: black;
+    --color: var(--md-on-surface);
     --elevation: none;
     --font: var(--md-label-large-size);
     --height: 40px;
@@ -36,6 +36,7 @@
     --focus-elevation: none;
     --focus-opacity: var(--md-focus-opacity);
     --focus-outline-color: none;
+    --pressed-background: var(--hover-background);
     --pressed-elevation: none;
     --pressed-opacity: var(--md-pressed-opacity);
     --pressed-outline-color: none;
@@ -124,6 +125,8 @@
     border-color: var(--pressed-outline-color);
 }
 :host([active])::after {
+    /* TODO: Ripple effect for chips */
+    background-color: var(--pressed-background);
     opacity: var(--pressed-opacity);
 }
 

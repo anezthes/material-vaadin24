@@ -15,6 +15,8 @@ import com.vaadin.flow.router.PageTitle;
 @CssImport(value = "/themes/material/components/app-layout.css", themeFor = "vaadin-app-layout")
 @CssImport(value = "/themes/material/components/button.css", themeFor = "vaadin-button")
 @CssImport(value = "/themes/material/components/drawer-toggle.css", themeFor = "vaadin-drawer-toggle")
+@CssImport(value = "/themes/material/components/input-container.css", themeFor = "vaadin-input-container")
+@CssImport(value = "/themes/material/components/text-field.css", themeFor = "vaadin-text-field")
 @PageTitle("Material Design 3 for Vaadin 23")
 @StyleSheet("https://fonts.googleapis.com/icon?family=Material+Icons")
 public class MainLayout extends AppLayout {
@@ -44,7 +46,7 @@ public class MainLayout extends AppLayout {
 
 	private void createAppBar() {
 		topAppBar = new TopAppBar();
-		topAppBar.setType(TopAppBar.Type.MEDIUM);
+		topAppBar.setType(TopAppBar.Type.SMALL);
 		addToNavbar(topAppBar);
 	}
 
@@ -77,13 +79,14 @@ public class MainLayout extends AppLayout {
 
 		UnorderedList list = new UnorderedList();
 		list.add(
-				new NavigationDrawerItem(ButtonsView.class, "Buttons", MaterialIcon.INBOX, "26"),
+				new NavigationDrawerItem(ButtonsView.class, "Buttons", MaterialIcon.SMART_BUTTON, "26"),
 				new NavigationDrawerItem(CardsView.class, "Cards", MaterialIcon.OUTBOX, "100+"),
 				new NavigationDrawerItem(ChipsView.class, "Chips", MaterialIcon.FAVORITE),
-				new NavigationDrawerItem(DialogsView.class, "Dialogs", MaterialIcon.DELETE),
+				new NavigationDrawerItem(DialogsView.class, "Dialogs", MaterialIcon.WEB_ASSET),
 				new NavigationDrawerItem(NavigationBarView.class, "Navigation bar", MaterialIcon.CIRCLE),
-				new NavigationDrawerItem(NavigationDrawerView.class, "Navigation drawer", MaterialIcon.CHANGE_HISTORY),
+				new NavigationDrawerItem(NavigationDrawerView.class, "Navigation drawer", MaterialIcon.MENU),
 				new NavigationDrawerItem(NavigationRailView.class, "Navigation rail", MaterialIcon.SQUARE),
+				new NavigationDrawerItem(TextFieldsView.class, "Text field", MaterialIcon.TEXT_FIELDS),
 				new NavigationDrawerItem(TopAppBarView.class, "Top app bar", MaterialIcon.CIRCLE)
 		);
 

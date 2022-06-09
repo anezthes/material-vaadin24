@@ -5,7 +5,6 @@
     --disabled-background: none;
     --disabled-outline-color: var(--md-on-surface);
     --hover-background: var(--md-primary);
-    --hover-opacity: var(--md-hover-opacity);
     --focus-outline-color: var(--md-primary);
     --pressed-outline-color: var(--md-outline);
 }

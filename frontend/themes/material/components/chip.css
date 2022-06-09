@@ -1,0 +1,29 @@
+.chip {
+    --height: 32px;
+    --padding: 0 16px;
+    --shape: 8px;
+
+    --hover-background: var(--md-on-surface);
+    --pressed-background: var(--md-on-surface);
+}
+
+.chip[theme~="assist"]:not([theme~="elevated"]) {
+    --outline: 1px solid var(--md-outline);
+
+    --disabled-background: none;
+    --disabled-outline-color: var(--md-on-surface);
+    --focus-outline-color: var(--md-on-surface);
+    --pressed-outline-color: var(--md-outline);
+}
+
+.chip[theme~="elevated"] {
+    --color: var(--md-on-surface);
+}
+
+/* Icon */
+.chip .material-icons {
+    color: var(--md-primary);
+}
+.chip[disabled] .material-icons {
+    color: var(--md-on-surface);
+}

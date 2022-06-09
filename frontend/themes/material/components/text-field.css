@@ -1,0 +1,90 @@
+.vaadin-field-container {
+    position: relative;
+}
+
+:host([theme~="filled"]) {
+    --height: 56px;
+    --leading-icon-size: 20px;
+    --trailing-icon-size: 24px;
+    --indicator: inset 0 -1px 0 0 var(--md-on-surface-variant);
+    --padding: 24px 16px 8px 16px;
+    --shape: 4px 4px 0 0;
+}
+
+:host([theme~="filled"][has-prefix]) {
+    --padding: 24px 16px 8px 48px;
+}
+
+:host([theme~="filled"][clear-button-visible]) {
+    --padding: 24px 52px 8px 16px;
+}
+
+:host([theme~="filled"][has-prefix][clear-button-visible]) {
+    --padding: 24px 52px 8px 48px;
+}
+
+/* Label */
+:host([theme~="filled"]) [part='label'] {
+    color: var(--md-on-surface-variant);
+    font-size: var(--md-body-large-size);
+    font-weight: var(--md-body-large-weight);
+    left: 16px;
+    letter-spacing: var(--md-body-large-tracking);
+    line-height: var(--md-body-large-line-height);
+    pointer-events: none;
+    position: absolute;
+    top: calc((var(--height) - var(--md-body-large-line-height)) / 2);
+}
+
+:host([theme~="filled"][has-prefix]) [part='label'] {
+    left: 48px;
+}
+
+:host([theme~="filled"][focused]) [part='label'],
+:host([theme~="filled"][has-value]) [part='label'] {
+    font-size: var(--md-body-small-size);
+    line-height: var(--md-body-small-line-height);
+    top: 8px;
+}
+
+/* Prefix */
+:host([theme~="filled"]) slot[name='prefix'] {
+    color: var(--md-on-surface-variant);
+    display: flex;
+    left: 12px;
+    position: absolute;
+    top: calc((var(--height) - var(--leading-icon-size)) / 2);
+}
+
+:host([theme~="filled"]) slot[name='prefix']::slotted(.material-icons) {
+    font-size: var(--leading-icon-size) !important;
+}
+
+/* Suffix */
+:host([theme~="filled"]) slot[name='suffix'] {
+    color: var(--md-on-surface-variant);
+}
+
+/* Clear button */
+:host([theme~="filled"]) [part='clear-button'] {
+    color: var(--md-on-surface-variant);
+    direction: ltr;
+    font-family: 'Material Icons';
+    font-size: var(--trailing-icon-size);
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    position: absolute;
+    right: 12px;
+    top: calc((var(--height) - var(--trailing-icon-size)) / 2);
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+:host([theme~="filled"]) [part='clear-button']::before {
+    content: "highlight_off";
+}

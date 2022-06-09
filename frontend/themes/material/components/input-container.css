@@ -1,0 +1,20 @@
+::slotted(input) {
+    text-overflow: ellipsis;
+}
+
+:host([theme~="filled"]) {
+    background-color: var(--md-surface-variant);
+    border-radius: var(--shape);
+    box-shadow: var(--indicator);
+    box-sizing: border-box;
+    height: var(--height);
+    padding: var(--padding);
+}
+
+:host([theme~="filled"]) ::slotted(input) {
+    caret-color: var(--md-primary);
+    font-size: var(--md-body-large-size);
+    font-weight: var(--md-body-large-weight);
+    letter-spacing: var(--md-body-large-tracking);
+    line-height: var(--md-body-large-line-height);
+}
