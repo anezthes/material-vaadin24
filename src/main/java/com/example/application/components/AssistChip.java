@@ -1,7 +1,6 @@
 package com.example.application.components;
 
 import com.example.application.MaterialIcon;
-import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.button.Button;
 
 public class AssistChip extends Button {

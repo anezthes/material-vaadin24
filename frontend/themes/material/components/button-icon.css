@@ -1,0 +1,63 @@
+:host([theme~="icon"]:not([theme^="fab"])) {
+    --min-width: 40px;
+    --padding: 0;
+    --width: 40px;
+
+    --hover-elevation: none;
+}
+
+/* Filled */
+:host([theme~="icon"][theme~="filled"][aria-pressed="false"]) {
+    --background: var(--md-surface-variant);
+    --color: var(--md-primary);
+
+    --hover-background: var(--md-primary);
+    --focus-background: var(--md-primary);
+    --pressed-background: var(--md-primary);
+}
+
+/* Filled tonal */
+:host([theme~="icon"][theme~="filled-tonal"][aria-pressed="false"]) {
+    --color: var(--md-on-surface-variant);
+    --background: var(--md-surface-variant);
+}
+
+/* Outlined */
+:host([theme~="icon"][theme~="outlined"]) {
+    --color: var(--md-on-surface-variant);
+
+    --hover-background: var(--md-on-surface-variant);
+    --focus-background: var(--md-on-surface-variant);
+    --focus-outline-color: var(--md-outline);
+    --pressed-color: var(--md-on-surface);
+    --pressed-background: var(--md-on-surface);
+}
+
+:host([theme~="icon"][theme~="outlined"][aria-pressed="true"]) {
+    --background: var(--md-inverse-surface);
+    --color: var(--md-inverse-on-surface);
+    --outline: none;
+
+    --hover-background: var(--md-inverse-on-surface);
+    --focus-background: var(--md-inverse-on-surface);
+    --pressed-color: var(--md-inverse-on-surface);
+    --pressed-background: var(--md-inverse-on-surface);
+}
+
+/* Standard */
+:host([theme="icon"]),
+:host([theme="icon toggle"]) {
+    --color: var(--md-on-surface-variant);
+
+    --hover-background: var(--md-on-surface-variant);
+    --focus-background: var(--md-on-surface-variant);
+    --pressed-background: var(--md-on-surface-variant);
+}
+
+:host([theme="icon toggle"][aria-pressed="true"]) {
+    --color: var(--md-primary);
+
+    --hover-background: var(--md-primary);
+    --focus-background: var(--md-primary);
+    --pressed-background: var(--md-primary);
+}

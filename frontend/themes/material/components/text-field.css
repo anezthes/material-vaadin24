@@ -81,7 +81,7 @@ slot[name='suffix'] {
 }
 
 [part='clear-button']::before {
-    content: "highlight_off";
+    content: "cancel";
 }
 
 /* Helper text */

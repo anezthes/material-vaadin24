@@ -2,11 +2,9 @@ package com.example.application.views;
 
 import com.example.application.MaterialIcon;
 import com.example.application.components.AssistChip;
-import com.example.application.componentthemes.ButtonTheme;
 import com.example.application.componentthemes.ChipTheme;
 import com.example.application.utilityclasses.*;
 import com.vaadin.flow.component.HasComponents;
-import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.H3;

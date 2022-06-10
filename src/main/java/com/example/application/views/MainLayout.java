@@ -79,7 +79,8 @@ public class MainLayout extends AppLayout {
 
 		UnorderedList list = new UnorderedList();
 		list.add(
-				new NavigationDrawerItem(ButtonsView.class, "Buttons", MaterialIcon.SMART_BUTTON, "26"),
+				new NavigationDrawerItem(ButtonsView.class, "Buttons", MaterialIcon.ADS_CLICK, "26"),
+				new NavigationDrawerItem(IconButtonsView.class, "Icon buttons", MaterialIcon.FAVORITE),
 				new NavigationDrawerItem(CardsView.class, "Cards", MaterialIcon.OUTBOX, "100+"),
 				new NavigationDrawerItem(ChipsView.class, "Chips", MaterialIcon.FAVORITE),
 				new NavigationDrawerItem(DialogsView.class, "Dialogs", MaterialIcon.WEB_ASSET),

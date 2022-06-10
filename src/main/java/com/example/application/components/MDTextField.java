@@ -1,6 +1,5 @@
 package com.example.application.components;
 
-import com.example.application.componentthemes.TextFieldTheme;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.textfield.TextField;

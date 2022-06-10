@@ -1,12 +1,13 @@
 @import "button-elevated.css";
-@import "button-filled.css";
-@import "button-filled-tonal.css";
-@import "button-outlined.css";
-@import "button-text.css";
 @import "button-fab.css";
 @import "button-fab-small.css";
 @import "button-fab-large.css";
 @import "button-fab-extended.css";
+@import "button-filled.css";
+@import "button-filled-tonal.css";
+@import "button-icon.css";
+@import "button-outlined.css";
+@import "button-text.css";
 
 :host {
     --background: none;
@@ -37,6 +38,7 @@
     --focus-opacity: var(--md-focus-opacity);
     --focus-outline-color: none;
     --pressed-background: var(--hover-background);
+    --pressed-color: var(--color);
     --pressed-elevation: none;
     --pressed-opacity: var(--md-pressed-opacity);
     --pressed-outline-color: none;
@@ -120,13 +122,14 @@
 /* Active */
 :host([active]) {
     box-shadow: var(--pressed-elevation);
+    color: var(--pressed-color);
 }
 :host([active])::before {
     border-color: var(--pressed-outline-color);
 }
 :host([active])::after {
     /* TODO: Ripple effect for chips */
-    background-color: var(--pressed-background);
+    background: var(--pressed-background);
     opacity: var(--pressed-opacity);
 }
 

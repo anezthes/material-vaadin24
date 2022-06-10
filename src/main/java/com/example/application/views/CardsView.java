@@ -7,8 +7,6 @@ import com.example.application.utilityclasses.*;
 import com.vaadin.flow.component.Unit;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.*;
-import com.vaadin.flow.component.orderedlayout.FlexComponent;
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
@@ -53,11 +51,11 @@ public class CardsView extends Main {
 
 	private void addCardExamples() {
 		Div cards = new Div(
-			createCardExample1(CardTheme.ELEVATED),
-			createCardExample2(CardTheme.OUTLINED),
-			createCardExample3(CardTheme.ELEVATED),
-			createCardExample4(CardTheme.FILLED),
-			createCardExample5(CardTheme.OUTLINED)
+				createCardExample1(CardTheme.ELEVATED),
+				createCardExample2(CardTheme.OUTLINED),
+				createCardExample3(CardTheme.ELEVATED),
+				createCardExample4(CardTheme.FILLED),
+				createCardExample5(CardTheme.OUTLINED)
 		);
 		cards.addClassNames(Display.FLEX, FlexDirection.COLUMN, Gap._4);
 		add(cards);
