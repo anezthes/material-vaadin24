@@ -8,17 +8,6 @@
     width: 100%;
 }
 
-/* Navigation icon */
-.top-app-bar vaadin-drawer-toggle {
-    --color: var(--md-on-surface);
-    --height: var(--md-top-app-bar-target-size);
-    --icon-size: var(--md-top-app-bar-icon-size);
-    --padding: 0;
-    --width: var(--md-top-app-bar-target-size);
-
-    --hover-background: var(--md-primary);
-}
-
 /* Title */
 .top-app-bar h1 {
     color: var(--md-on-surface);
@@ -32,13 +21,4 @@
 /* Interactive icons (buttons) */
 .top-app-bar .interactive-icons {
     margin-inline-start: auto;
-}
-.top-app-bar .interactive-icons vaadin-button {
-    --color: var(--md-on-surface);
-    --height: var(--md-top-app-bar-target-size);
-    --icon-size: var(--md-top-app-bar-icon-size);
-    --padding: 0;
-    --width: var(--md-top-app-bar-target-size);
-
-    --hover-background: var(--md-primary);
 }

@@ -1,0 +1,16 @@
+.bottom-app-bar {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    padding: 0 var(--md-space-4) 0 var(--md-space-1);
+    width: 100%;
+}
+
+.bottom-app-bar vaadin-button[theme~="fab"] {
+    --elevation: none;
+    --hover-elevation: none;
+    --focus-elevation: none;
+    --pressed-elevation: none;
+}

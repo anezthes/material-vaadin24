@@ -12,12 +12,12 @@ import com.vaadin.flow.router.Route;
 @Route(value = "color", layout = MainLayout.class)
 public class ColorView extends Main {
 
-	public ColorView() {
-		addClassNames(Padding.Horizontal._6);
+    public ColorView() {
+        addClassNames(Padding.Horizontal._6);
 
-		H2 title = new H2("Color");
-		title.addClassNames(Typography.Display.L, Margin._0);
-		add(title);
-	}
+        H2 title = new H2("Color");
+        title.addClassNames(Typography.Display.L, Margin._0);
+        add(title);
+    }
 
 }

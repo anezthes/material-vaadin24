@@ -9,8 +9,8 @@ import com.vaadin.flow.router.Route;
 @Route(value = "navigation-rail", layout = MainLayout.class)
 public class NavigationRailView extends Main {
 
-	public NavigationRailView() {
-		add(new H2("Navigation rail"));
-	}
+    public NavigationRailView() {
+        add(new H2("Navigation rail"));
+    }
 
 }

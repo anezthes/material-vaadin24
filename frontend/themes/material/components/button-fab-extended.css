@@ -1,18 +1,10 @@
 :host([theme~="fab-extended"]) {
-    --background: var(--md-primary-container);
-    --color: var(--md-on-primary-container);
-    --elevation: var(--md-elevation-3);
     --height: 56px;
     --icon-size: 24px;
     --min-width: 80px;
     --padding: 0 20px;
     --padding-between-elements: 12px;
     --shape: 16px;
-
-    --hover-background: var(--md-on-primary-container);
-    --hover-elevation: var(--md-elevation-4);
-    --focus-elevation: var(--md-elevation-3);
-    --pressed-elevation: var(--md-elevation-3);
 }
 
 :host([theme~="fab-extended"]) [part='prefix'] ::slotted(.material-icons) {

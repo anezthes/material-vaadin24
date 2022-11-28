@@ -9,8 +9,8 @@ import com.vaadin.flow.router.Route;
 @Route(value = "navigation-drawer", layout = MainLayout.class)
 public class NavigationDrawerView extends Main {
 
-	public NavigationDrawerView() {
-		add(new H2("Navigation drawer"));
-	}
+    public NavigationDrawerView() {
+        add(new H2("Navigation drawer"));
+    }
 
 }

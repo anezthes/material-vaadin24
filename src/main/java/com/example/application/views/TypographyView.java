@@ -12,12 +12,12 @@ import com.vaadin.flow.router.Route;
 @Route(value = "typography", layout = MainLayout.class)
 public class TypographyView extends Main {
 
-	public TypographyView() {
-		addClassNames(Padding.Horizontal._6);
+    public TypographyView() {
+        addClassNames(Padding.Horizontal._6);
 
-		H2 title = new H2("Typography");
-		title.addClassNames(Typography.Display.L, Margin._0);
-		add(title);
-	}
+        H2 title = new H2("Typography");
+        title.addClassNames(Typography.Display.L, Margin._0);
+        add(title);
+    }
 
 }

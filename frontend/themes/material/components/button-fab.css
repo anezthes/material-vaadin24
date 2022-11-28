@@ -1,15 +1,21 @@
-:host([theme~="fab"]) {
+/* Common for all FAB buttons */
+:host([theme*="fab"]) {
     --background: var(--md-primary-container);
     --color: var(--md-on-primary-container);
     --elevation: var(--md-elevation-3);
+
+    --hover-background: var(--md-on-primary-container);
+    --hover-elevation: var(--md-elevation-4);
+    --focus-background: var(--md-on-primary-container);
+    --focus-elevation: var(--md-elevation-3);
+    --pressed-background: var(--md-on-primary-container);
+    --pressed-elevation: var(--md-elevation-3);
+}
+
+:host([theme~="fab"]) {
     --height: 56px;
     --icon-size: 24px;
     --padding: 0;
     --shape: 16px;
     --width: 56px;
-
-    --hover-background: var(--md-on-primary-container);
-    --hover-elevation: var(--md-elevation-4);
-    --focus-elevation: var(--md-elevation-3);
-    --pressed-elevation: var(--md-elevation-3);
 }

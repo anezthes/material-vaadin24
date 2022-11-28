@@ -1,15 +1,7 @@
 :host([theme~="fab-large"]) {
-    --background: var(--md-primary-container);
-    --color: var(--md-on-primary-container);
-    --elevation: var(--md-elevation-3);
     --height: 96px;
     --icon-size: 36px;
     --padding: 0;
     --shape: 28px;
     --width: 96px;
-
-    --hover-background: var(--md-on-primary-container);
-    --hover-elevation: var(--md-elevation-4);
-    --focus-elevation: var(--md-elevation-3);
-    --pressed-elevation: var(--md-elevation-3);
 }

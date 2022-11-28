@@ -8,20 +8,22 @@ import com.vaadin.flow.router.RouterLink;
 
 public class NavigationDrawerItem extends ListItem {
 
-	private RouterLink link;
+    public static final String NAVIGATION_DRAWER_ITEM = "navigation-drawer-item";
 
-	public NavigationDrawerItem(Class<? extends Component> view, String label, MaterialIcon icon) {
-		addClassName("navigation-drawer-item");
+    private RouterLink link;
 
-		link = new RouterLink();
-		link.add(icon.create(), new Span(label));
-		link.setRoute(view);
-		add(link);
-	}
+    public NavigationDrawerItem(Class<? extends Component> view, String label, MaterialIcon icon) {
+        addClassName(NAVIGATION_DRAWER_ITEM);
 
-	public NavigationDrawerItem(Class<? extends Component> view, String label, MaterialIcon icon, String badge) {
-		this(view, label, icon);
-		link.add(new Span(badge));
-	}
+        link = new RouterLink();
+        link.add(icon.create(), new Span(label));
+        link.setRoute(view);
+        add(link);
+    }
+
+    public NavigationDrawerItem(Class<? extends Component> view, String label, MaterialIcon icon, String badge) {
+        this(view, label, icon);
+        link.add(new Span(badge));
+    }
 
 }

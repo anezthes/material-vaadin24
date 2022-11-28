@@ -5,7 +5,6 @@ import com.example.application.components.NavigationDrawerItem;
 import com.example.application.components.TopAppBar;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.dependency.CssImport;
-import com.vaadin.flow.component.dependency.StyleSheet;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Nav;
 import com.vaadin.flow.component.html.UnorderedList;
@@ -18,82 +17,82 @@ import com.vaadin.flow.router.PageTitle;
 @CssImport(value = "/themes/material/components/input-container.css", themeFor = "vaadin-input-container")
 @CssImport(value = "/themes/material/components/text-field.css", themeFor = "vaadin-text-field")
 @PageTitle("Material Design 3 for Vaadin 23")
-@StyleSheet("https://fonts.googleapis.com/icon?family=Material+Icons")
 public class MainLayout extends AppLayout {
 
-	public TopAppBar topAppBar;
+    public TopAppBar topAppBar;
 
-	public String STYLES_LABEL = "styles-label";
-	public String COMPONENTS_LABEL = "components-label";
+    public String STYLES_LABEL = "styles-label";
+    public String COMPONENTS_LABEL = "components-label";
 
-	public MainLayout() {
-		getElement().executeJs(
-				"var prevScrollPos = 0;" +
-						"var topappbar = document.querySelector('.top-app-bar');" +
-						"var content = this.shadowRoot.querySelector('[content]');" +
-						"content.addEventListener('scroll', function(e) {" +
-						"  if (content.scrollTop > 0) {" +
-						"    topappbar.classList.add('surface-2');" +
-						"  } else {" +
-						"    topappbar.classList.remove('surface-2');" +
-						"  }" +
-						"});"
-		);
-		setPrimarySection(Section.DRAWER);
-		createAppBar();
-		createNavigationDrawer();
-	}
+    public MainLayout() {
+        getElement().executeJs(
+                "var prevScrollPos = 0;" +
+                        "var topappbar = document.querySelector('.top-app-bar');" +
+                        "var content = this.shadowRoot.querySelector('[content]');" +
+                        "content.addEventListener('scroll', function(e) {" +
+                        "  if (content.scrollTop > 0) {" +
+                        "    topappbar.classList.add('surface-2');" +
+                        "  } else {" +
+                        "    topappbar.classList.remove('surface-2');" +
+                        "  }" +
+                        "});"
+        );
+        setPrimarySection(Section.DRAWER);
+        createAppBar();
+        createNavigationDrawer();
+    }
 
-	private void createAppBar() {
-		topAppBar = new TopAppBar();
-		topAppBar.setType(TopAppBar.Type.SMALL);
-		addToNavbar(topAppBar);
-	}
+    private void createAppBar() {
+        topAppBar = new TopAppBar();
+        topAppBar.setType(TopAppBar.Type.SMALL);
+        addToNavbar(topAppBar);
+    }
 
-	private void createNavigationDrawer() {
-		// Styles
-		createStylesNav();
+    private void createNavigationDrawer() {
+        // Styles
+        createStylesNav();
 
-		// Components
-		createComponentsNav();
-	}
+        // Components
+        createComponentsNav();
+    }
 
-	private void createStylesNav() {
-		H2 label = new H2("Styles");
-		label.setId(STYLES_LABEL);
+    private void createStylesNav() {
+        H2 label = new H2("Styles");
+        label.setId(STYLES_LABEL);
 
-		UnorderedList list = new UnorderedList();
-		list.add(
-				new NavigationDrawerItem(ColorView.class, "Color", MaterialIcon.PALETTE),
-				new NavigationDrawerItem(TypographyView.class, "Typography", MaterialIcon.ABC)
-		);
+        UnorderedList list = new UnorderedList();
+        list.add(
+                new NavigationDrawerItem(ColorView.class, "Color", MaterialIcon.PALETTE),
+                new NavigationDrawerItem(TypographyView.class, "Typography", MaterialIcon.ABC)
+        );
 
-		Nav nav = new Nav(label, list);
-		nav.getElement().setAttribute("aria-labelledby", STYLES_LABEL);
-		addToDrawer(nav);
-	}
+        Nav nav = new Nav(label, list);
+        nav.getElement().setAttribute("aria-labelledby", STYLES_LABEL);
+        addToDrawer(nav);
+    }
 
-	private void createComponentsNav() {
-		H2 label = new H2("Components");
-		label.setId(COMPONENTS_LABEL);
+    private void createComponentsNav() {
+        H2 label = new H2("Components");
+        label.setId(COMPONENTS_LABEL);
 
-		UnorderedList list = new UnorderedList();
-		list.add(
-				new NavigationDrawerItem(BadgesView.class, "Badges", MaterialIcon.BADGE),
-				new NavigationDrawerItem(ButtonsView.class, "Buttons", MaterialIcon.ADS_CLICK, "26"),
-				new NavigationDrawerItem(IconButtonsView.class, "Icon buttons", MaterialIcon.FAVORITE),
-				new NavigationDrawerItem(CardsView.class, "Cards", MaterialIcon.OUTBOX, "100+"),
-				new NavigationDrawerItem(ChipsView.class, "Chips", MaterialIcon.FAVORITE),
-				new NavigationDrawerItem(DialogsView.class, "Dialogs", MaterialIcon.WEB_ASSET),
-				new NavigationDrawerItem(NavigationBarView.class, "Navigation bar", MaterialIcon.CIRCLE),
-				new NavigationDrawerItem(NavigationDrawerView.class, "Navigation drawer", MaterialIcon.MENU),
-				new NavigationDrawerItem(NavigationRailView.class, "Navigation rail", MaterialIcon.SQUARE),
-				new NavigationDrawerItem(TextFieldsView.class, "Text field", MaterialIcon.TEXT_FIELDS),
-				new NavigationDrawerItem(TopAppBarView.class, "Top app bar", MaterialIcon.CIRCLE)
-		);
+        UnorderedList list = new UnorderedList();
+        list.add(
+                new NavigationDrawerItem(BadgesView.class, "Badges", MaterialIcon.BADGE),
+                new NavigationDrawerItem(BottomAppBarView.class, "Bottom app bar", MaterialIcon.VERTICAL_ALIGN_BOTTOM),
+                new NavigationDrawerItem(ButtonsView.class, "Buttons", MaterialIcon.ADS_CLICK, "26"),
+                new NavigationDrawerItem(IconButtonsView.class, "Icon buttons", MaterialIcon.FAVORITE),
+                new NavigationDrawerItem(CardsView.class, "Cards", MaterialIcon.DASHBOARD, "100+"),
+                new NavigationDrawerItem(ChipsView.class, "Chips", MaterialIcon.FAVORITE),
+                new NavigationDrawerItem(DialogsView.class, "Dialogs", MaterialIcon.WEB_ASSET),
+                new NavigationDrawerItem(NavigationBarView.class, "Navigation bar", MaterialIcon.CIRCLE),
+                new NavigationDrawerItem(NavigationDrawerView.class, "Navigation drawer", MaterialIcon.MENU),
+                new NavigationDrawerItem(NavigationRailView.class, "Navigation rail", MaterialIcon.SQUARE),
+                new NavigationDrawerItem(TextFieldsView.class, "Text field", MaterialIcon.TEXT_FIELDS),
+                new NavigationDrawerItem(TopAppBarView.class, "Top app bar", MaterialIcon.VERTICAL_ALIGN_TOP)
+        );
 
-		Nav nav = new Nav(label, list);
-		nav.getElement().setAttribute("aria-labelledby", COMPONENTS_LABEL);
-		addToDrawer(nav);
-	}
+        Nav nav = new Nav(label, list);
+        nav.getElement().setAttribute("aria-labelledby", COMPONENTS_LABEL);
+        addToDrawer(nav);
+    }
 }

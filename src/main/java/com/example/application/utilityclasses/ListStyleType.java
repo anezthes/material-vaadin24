@@ -2,6 +2,6 @@ package com.example.application.utilityclasses;
 
 public class ListStyleType {
 
-	public static String NONE = "list-none";
+    public static String NONE = "list-none";
 
 }

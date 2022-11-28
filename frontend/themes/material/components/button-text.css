@@ -5,6 +5,8 @@
 
     --disabled-background: none;
     --hover-background: var(--md-primary);
+    --focus-background: var(--md-primary);
+    --pressed-background: var(--md-primary);
 }
 
 :host([theme~="text"]) [part='prefix'] ::slotted(.material-icons) {

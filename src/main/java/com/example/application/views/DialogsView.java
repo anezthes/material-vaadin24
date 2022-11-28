@@ -9,8 +9,8 @@ import com.vaadin.flow.router.Route;
 @Route(value = "dialogs", layout = MainLayout.class)
 public class DialogsView extends Main {
 
-	public DialogsView() {
-		add(new H2("Dialogs"));
-	}
+    public DialogsView() {
+        add(new H2("Dialogs"));
+    }
 
 }

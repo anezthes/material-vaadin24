@@ -30,7 +30,7 @@ html {
     z-index: 1;
 }
 *[class*="surface-"]::after {
-    background: var(--md-primary);
+    background: var(--md-surface-tint-color);
     content: "";
     inset: 0;
     pointer-events: none;

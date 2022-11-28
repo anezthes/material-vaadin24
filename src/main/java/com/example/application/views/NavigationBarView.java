@@ -9,8 +9,8 @@ import com.vaadin.flow.router.Route;
 @Route(value = "navigation-bar", layout = MainLayout.class)
 public class NavigationBarView extends Main {
 
-	public NavigationBarView() {
-		add(new H2("Navigation bar"));
-	}
+    public NavigationBarView() {
+        add(new H2("Navigation bar"));
+    }
 
 }

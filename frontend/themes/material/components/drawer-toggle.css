@@ -1,8 +1,17 @@
 :host {
+    --color: var(--md-on-surface);
+    --height: 48px;
+    --icon-size: 24px;
+    --padding: 0;
+    --width: 48px;
 
+    --hover-background: var(--md-on-surface-variant);
+    --focus-background: var(--md-on-surface-variant);
+    --pressed-background: var(--md-on-surface-variant);
 }
 
-:host::before, :host::after {
+:host::before,
+:host::after {
     inset: 4px;
 }
 
