@@ -2,6 +2,10 @@
 
 }
 
+:host::before, :host::after {
+    inset: 4px;
+}
+
 /* Reset default styles */
 [part='icon'],
 [part='icon']::before {

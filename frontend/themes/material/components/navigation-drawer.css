@@ -1,6 +1,6 @@
 /* Divider */
 nav[slot="drawer"]:not(:last-of-type) {
-    border-bottom: 1px solid var(--md-outline);
+    border-bottom: 1px solid var(--md-outline-variant);
 }
 
 /* List */

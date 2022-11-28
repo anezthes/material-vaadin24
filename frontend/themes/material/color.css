@@ -29,6 +29,7 @@ html {
     --md-on-surface-variant: var(--md-neutral-variant-30);
 
     --md-outline: var(--md-neutral-variant-50);
+    --md-outline-variant: var(--md-neutral-variant-80);
 
     --md-surface-tint-color: var(--md-primary);
 

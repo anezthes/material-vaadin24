@@ -1,3 +1,4 @@
+@import url('./components/badge.css');
 @import url('./components/card.css');
 @import url('./components/card-elevated.css');
 @import url('./components/card-filled.css');
@@ -12,6 +13,7 @@
 @import url('./components/top-app-bar.css');
 @import url('./color.css');
 @import url('./elevation.css');
+@import url('./shape.css');
 @import url('./spacing.css');
 @import url('./typography.css');
 @import url('./utility.css');
@@ -36,9 +38,9 @@ html {
     --md-drawer-item-padding-between: 12px;
     --md-drawer-item-shape: 28px;
 
-    --md-drawer-item-hover-opacity: 0.16;
-    --md-drawer-item-focus-opacity: 0.24;
-    --md-drawer-item-pressed-opacity: 0.2;
+    --md-drawer-item-hover-opacity: 0.08;
+    --md-drawer-item-focus-opacity: 0.12;
+    --md-drawer-item-pressed-opacity: 0.12;
 
     /* === TOP APP BAR === */
     --md-top-app-bar-icon-size: 24px;

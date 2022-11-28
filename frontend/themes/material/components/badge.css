@@ -1,0 +1,26 @@
+[theme~="badge"] {
+    --padding: 0;
+    --size: 16px;
+    align-items: center;
+    background-color: var(--md-error);
+    border-radius: var(--md-shape-full);
+    color: var(--md-on-error);
+    display: inline-flex;
+    font-size: var(--md-label-small-size);
+    font-weight: var(--md-label-small-weight);
+    height: var(--size);
+    justify-content: center;
+    letter-spacing: var(--md-label-small-tracking);
+    line-height: var(--md-label-small-line-height);
+    padding: var(--padding);
+    width: var(--size);
+}
+
+[theme~="badge"]:empty {
+    --size: 6px;
+}
+
+[theme~="badge"][theme~="multiple-digits"] {
+    --padding: 0 4px;
+    --size: max-content;
+}

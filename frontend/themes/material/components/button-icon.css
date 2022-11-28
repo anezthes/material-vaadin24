@@ -1,9 +1,13 @@
-:host([theme~="icon"]:not([theme^="fab"])) {
-    --min-width: 40px;
-    --padding: 0;
-    --width: 40px;
+:host([theme~="icon"]:not([theme*="fab"])) {
+    --height: 48px;
+    --width: 48px;
 
     --hover-elevation: none;
+}
+
+:host([theme~="icon"]:not([theme*="fab"]))::before,
+:host([theme~="icon"]:not([theme*="fab"]))::after {
+    inset: 4px;
 }
 
 /* Filled */

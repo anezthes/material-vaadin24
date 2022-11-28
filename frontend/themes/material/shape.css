@@ -1,0 +1,13 @@
+html {
+    --md-shape-none: 0;
+    --md-shape-extra-small: 4px;
+    --md-shape-extra-small-top: 4px 4px 0 0;
+    --md-shape-small: 8px;
+    --md-shape-medium: 12px;
+    --md-shape-large: 16px;
+    --md-shape-large-end: 0 16px 16px 0;
+    --md-shape-large-top: 16px 16px 0 0;
+    --md-shape-extra-large: 28px;
+    --md-shape-extra-large-top: 28px 28px 0 0;
+    --md-shape-full: 9999px;
+}

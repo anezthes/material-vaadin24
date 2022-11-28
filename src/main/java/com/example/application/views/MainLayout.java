@@ -79,6 +79,7 @@ public class MainLayout extends AppLayout {
 
 		UnorderedList list = new UnorderedList();
 		list.add(
+				new NavigationDrawerItem(BadgesView.class, "Badges", MaterialIcon.BADGE),
 				new NavigationDrawerItem(ButtonsView.class, "Buttons", MaterialIcon.ADS_CLICK, "26"),
 				new NavigationDrawerItem(IconButtonsView.class, "Icon buttons", MaterialIcon.FAVORITE),
 				new NavigationDrawerItem(CardsView.class, "Cards", MaterialIcon.OUTBOX, "100+"),
