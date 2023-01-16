@@ -25,14 +25,18 @@ html {
     background-image: linear-gradient(var(--md-surface-1), var(--md-surface-1));
 }
 .surface-2 {
-    background: var(--md-surface-2);
+    background-color: var(--md-background);
+    background-image: linear-gradient(var(--md-surface-2), var(--md-surface-2));
 }
 .surface-3 {
-    background: var(--md-surface-3);
+    background-color: var(--md-background);
+    background-image: linear-gradient(var(--md-surface-3), var(--md-surface-3));
 }
 .surface-4 {
-    background: var(--md-surface-4);
+    background-color: var(--md-background);
+    background-image: linear-gradient(var(--md-surface-4), var(--md-surface-4));
 }
 .surface-5 {
-    background: var(--md-surface-5);
+    background-color: var(--md-background);
+    background-image: linear-gradient(var(--md-surface-5), var(--md-surface-5));
 }
