@@ -1,7 +1,55 @@
 :host {
+    --shape: 28px;
+    --icon-size: 24px;
+    --max-width: 560px;
+    --min-width: 280px;
+    --padding: 24px;
+    --padding-between-buttons: 8px;
+    --padding-between-body-actions: 24px;
+    --padding-between-icon-title: 16px;
+    --padding-between-title-body: 16px;
+}
 
+[part='backdrop'] {
+    background: var(--md-drawer-scrim);
 }
 
 [part='overlay'] {
-    background: var(--md-surface-1);
+    background-color: var(--md-background);
+    background-image: linear-gradient(var(--md-surface-1), var(--md-surface-1));
+    border-radius: var(--shape);
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+}
+
+[part='header'] {
+    padding: var(--padding) var(--padding) var(--padding-between-title-body) var(--padding);
+}
+
+:host([theme~='icon']) [part='header'] {
+    flex-direction: column-reverse;
+    gap: var(--padding-between-icon-title);
+}
+
+[part='title'] {
+    color: var(--md-on-surface);
+    font-size: var(--md-headline-small-size);
+    font-weight: var(--md-headline-small-weight);
+    letter-spacing: var(--md-headline-small-tracking);
+    line-height: var(--md-headline-small-line-height);
+}
+
+[part='content'] {
+    color: var(--md-on-surface-variant);
+    font-size: var(--md-body-medium-size);
+    font-weight: var(--md-body-medium-weight);
+    letter-spacing: var(--md-body-medium-tracking);
+    line-height: var(--md-body-medium-line-height);
+    min-width: auto;
+    padding: 0 var(--padding);
+}
+
+[part='footer'] {
+    gap: var(--padding-between-buttons);
+    padding: var(--padding-between-body-actions) var(--padding) var(--padding) var(--padding);
 }

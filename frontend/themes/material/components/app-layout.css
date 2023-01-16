@@ -1,7 +1,6 @@
 /* === BACKDROP === */
 [part='backdrop'] {
-    background: var(--md-drawer-scrim-color);
-    opacity: var(--md-drawer-scrim-opacity);
+    background: var(--md-drawer-scrim);
 }
 
 /* === DRAWER === */

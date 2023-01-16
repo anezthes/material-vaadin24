@@ -29,8 +29,7 @@ html {
     --md-drawer-shape: 0 16px 16px 0;
     --md-drawer-width: 360px;
 
-    --md-drawer-scrim-color: var(--md-neutral-variant-20);
-    --md-drawer-scrim-opacity: 0.4;
+    --md-drawer-scrim: rgba(0, 0, 0, 0.32);
 
     /* === DRAWER ITEM === */
     --md-drawer-item-height: 56px;
