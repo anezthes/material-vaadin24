@@ -2,66 +2,55 @@ package com.example.application.views;
 
 import com.example.application.MaterialIcon;
 import com.example.application.componentthemes.ButtonTheme;
-import com.example.application.utilityclasses.*;
+import com.example.application.utilityclasses.Display;
+import com.example.application.utilityclasses.FlexWrap;
+import com.example.application.utilityclasses.Gap;
 import com.vaadin.flow.component.HasComponents;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Div;
-import com.vaadin.flow.component.html.H2;
-import com.vaadin.flow.component.html.H3;
-import com.vaadin.flow.component.html.Main;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
 
 @PageTitle("Buttons")
 @Route(value = "buttons", layout = MainLayout.class)
-@RouteAlias(value = "", layout = MainLayout.class)
-public class ButtonsView extends Main {
+@RouteAlias(value = "buttons", layout = MainLayout.class)
+public class ButtonsView extends View {
 
     public ButtonsView() {
-        addClassNames(Padding._6);
+        super("Buttons");
 
-        H2 title = new H2("Buttons");
-        title.addClassNames(Typography.Display.L, Margin._0);
-        add(title);
-
-        add(createH3("Elevated"));
+        addH3("Elevated");
         addButtons(ButtonTheme.ELEVATED);
 
-        add(createH3("Filled"));
+        addH3("Filled");
         addButtons(ButtonTheme.FILLED);
 
-        add(createH3("Filled tonal"));
+        addH3("Filled tonal");
         addButtons(ButtonTheme.FILLED_TONAL);
 
-        add(createH3("Outlined"));
+        addH3("Outlined");
         addButtons(ButtonTheme.OUTLINED);
 
-        add(createH3("Text"));
+        addH3("Text");
         addButtons(ButtonTheme.TEXT);
 
-        add(createH3("Floating action button (FAB)"));
+        addH3("Floating action button (FAB)");
         addButtons(ButtonTheme.FAB);
 
-        add(createH3("Small FAB"));
+        addH3("Small FAB");
         addButtons(ButtonTheme.FAB_SMALL);
 
-        add(createH3("Large FAB"));
+        addH3("Large FAB");
         addButtons(ButtonTheme.FAB_LARGE);
 
-        add(createH3("Extended FAB"));
+        addH3("Extended FAB");
         addButtons(ButtonTheme.FAB_EXTENDED);
-    }
-
-    private H3 createH3(String text) {
-        H3 h3 = new H3(text);
-        h3.addClassNames(Typography.Body.M, Margin.Bottom._4, Margin.Top._8);
-        return h3;
     }
 
     private void addButtons(String theme) {
         Div buttons = new Div();
-        buttons.addClassNames(Display.FLEX, Gap._4);
+        buttons.addClassNames(Display.FLEX, FlexWrap.WRAP, Gap._4);
         add(buttons);
 
         if (theme.equals(ButtonTheme.FAB) || theme.equals(ButtonTheme.FAB_SMALL) || theme.equals(ButtonTheme.FAB_LARGE)) {
@@ -85,12 +74,14 @@ public class ButtonsView extends Main {
     }
 
     private void addButton(HasComponents container, String theme, String label, MaterialIcon icon) {
+        // Enabled
         Button button = new Button();
         if (label != null) button.setText(label);
         if (icon != null) button.setIcon(icon.create());
         button.addThemeName(theme);
         container.add(button);
 
+        // Disabled
         button = new Button();
         if (label != null) button.setText(label);
         if (icon != null) button.setIcon(icon.create());

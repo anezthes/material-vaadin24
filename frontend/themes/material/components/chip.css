@@ -1,29 +1,46 @@
 .chip {
-    --height: 32px;
-    --padding: 0 16px;
-    --shape: 8px;
-
-    --hover-background: var(--md-on-surface);
-    --pressed-background: var(--md-on-surface);
+    position: relative;
 }
 
-.chip[theme~="assist"]:not([theme~="elevated"]) {
-    --outline: 1px solid var(--md-outline);
+.chip vaadin-button[theme~="assist"] {
+    --padding: 0 34px 0 12px;
+}
 
+.chip[theme~="icon"] vaadin-button[theme~="assist"] {
+    --padding: 0 34px 0 16px;
+}
+
+.chip[theme~="avatar"] vaadin-button[theme~="assist"] {
+    --icon-size: 24px;
+    --padding: 0 34px 0 12px;
+    --shape: 16px;
+}
+
+.chip[theme~="avatar"] vaadin-button[theme~="assist"] img {
+    border-radius: 50%;
+}
+
+.chip[theme~="selected"] vaadin-button[theme~="assist"] {
+    --background: var(--md-secondary-container);
+    --disabled-background: var(--md-on-surface);
+    --outline: none;
+}
+
+.chip[theme~="selected"] vaadin-button {
+    --color: var(--md-on-secondary-container);
+}
+
+.chip vaadin-button[theme~="icon"] {
     --disabled-background: none;
-    --disabled-outline-color: var(--md-on-surface);
-    --focus-outline-color: var(--md-on-surface);
-    --pressed-outline-color: var(--md-outline);
+    --height: 32px;
+    --icon-size: 18px;
+    --padding: 0 8px;
+    --width: auto;
+    position: absolute;
+    right: 0;
 }
 
-.chip[theme~="elevated"] {
-    --color: var(--md-on-surface);
-}
-
-/* Icon */
-.chip .material-icons {
-    color: var(--md-primary);
-}
-.chip[disabled] .material-icons {
-    color: var(--md-on-surface);
+.chip vaadin-button[theme~="icon"]::before,
+.chip vaadin-button[theme~="icon"]::after {
+    inset: 4px 5px;
 }

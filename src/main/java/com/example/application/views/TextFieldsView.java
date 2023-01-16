@@ -3,39 +3,32 @@ package com.example.application.views;
 import com.example.application.MaterialIcon;
 import com.example.application.components.MDTextField;
 import com.example.application.componentthemes.TextFieldTheme;
-import com.example.application.utilityclasses.*;
-import com.vaadin.flow.component.html.*;
+import com.example.application.utilityclasses.Display;
+import com.example.application.utilityclasses.FlexWrap;
+import com.example.application.utilityclasses.Gap;
+import com.vaadin.flow.component.html.Div;
+import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
 @PageTitle("Text fields")
 @Route(value = "text-fields", layout = MainLayout.class)
-public class TextFieldsView extends Main {
+public class TextFieldsView extends View {
 
     public TextFieldsView() {
-        addClassNames(Padding._6);
+        super("Text fields");
 
-        H2 title = new H2("Text fields");
-        title.addClassNames(Typography.Display.L, Margin._0);
-        add(title);
-
-        add(createH3("Filled"));
+        addH3("Filled");
         addTextFields(TextFieldTheme.FILLED);
 
-        add(createH3("Outlined"));
+        addH3("Outlined");
         addTextFields(TextFieldTheme.OUTLINED);
-    }
-
-    private H3 createH3(String text) {
-        H3 h3 = new H3(text);
-        h3.addClassNames(Typography.Body.M, Margin.Bottom._4, Margin.Top._8);
-        return h3;
     }
 
     private void addTextFields(String theme) {
         Div fields = new Div();
-        fields.addClassNames(Display.FLEX, FlexWrap.WRAP, Gap._4);
+        fields.addClassNames(Display.FLEX, FlexWrap.WRAP, Gap._6);
         add(fields);
 
         TextField field = new MDTextField("Label text");

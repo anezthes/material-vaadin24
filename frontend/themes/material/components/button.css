@@ -1,3 +1,4 @@
+@import "button-chip.css";
 @import "button-elevated.css";
 @import "button-fab.css";
 @import "button-fab-small.css";
@@ -70,15 +71,17 @@
 }
 
 /* Icon */
-::slotted(.material-icons) {
+::slotted(*) {
     font-size: var(--icon-size) !important;
+    max-height: var(--icon-size);
+    max-width: var(--icon-size);
 }
-[part='prefix'] ::slotted(.material-icons) {
+[part='prefix'] ::slotted(*) {
     margin-inline-end: var(--padding-between-elements);
     /* Need has-prefix/has-suffix to skip this */
     margin-inline-start: calc(var(--padding-between-elements) * -1);
 }
-:host([theme~="icon"]) [part='prefix'] ::slotted(.material-icons) {
+:host([theme~="icon"]) [part='prefix'] ::slotted(*) {
     margin: 0;
 }
 

@@ -47,5 +47,8 @@ html {
     --md-top-app-bar-icon-size: 24px;
     --md-top-app-bar-target-size: 48px;
     --md-top-app-bar-avatar-size: 30px;
+}
 
+* {
+    box-sizing: border-box;
 }

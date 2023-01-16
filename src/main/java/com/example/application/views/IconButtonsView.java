@@ -3,60 +3,47 @@ package com.example.application.views;
 import com.example.application.MaterialIcon;
 import com.example.application.components.ToggleButton;
 import com.example.application.componentthemes.ButtonTheme;
-import com.example.application.utilityclasses.*;
+import com.example.application.utilityclasses.Display;
+import com.example.application.utilityclasses.Gap;
 import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.html.*;
+import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
 @PageTitle("Icon buttons")
 @Route(value = "icon-buttons", layout = MainLayout.class)
-public class IconButtonsView extends Main {
+public class IconButtonsView extends View {
 
     public IconButtonsView() {
-        addClassNames(Padding._6);
+        super("Icon buttons");
 
-        H2 title = new H2("Icon buttons");
-        title.addClassNames(Typography.Display.L, Margin._0);
-        add(title);
+        addH3("No toggle");
 
-        H3 subtitle = new H3("No toggle");
-        subtitle.addClassNames(Typography.Display.M, Margin.Bottom._0);
-        add(subtitle);
-
-        add(createH4("Standard"));
+        addH4("Standard");
         addButtons();
 
-        add(createH4("Filled"));
+        addH4("Filled");
         addButtons(ButtonTheme.FILLED);
 
-        add(createH4("Filled tonal"));
+        addH4("Filled tonal");
         addButtons(ButtonTheme.FILLED_TONAL);
 
-        add(createH4("Outlined"));
+        addH4("Outlined");
         addButtons(ButtonTheme.OUTLINED);
 
-        subtitle = new H3("Toggle");
-        subtitle.addClassNames(Typography.Display.M, Margin.Bottom._0);
-        add(subtitle);
+        addH3("Toggle");
 
-        add(createH4("Standard"));
+        addH4("Standard");
         addToggles();
 
-        add(createH4("Filled"));
+        addH4("Filled");
         addToggles(ButtonTheme.FILLED);
 
-        add(createH4("Filled tonal"));
+        addH4("Filled tonal");
         addToggles(ButtonTheme.FILLED_TONAL);
 
-        add(createH4("Outlined"));
+        addH4("Outlined");
         addToggles(ButtonTheme.OUTLINED);
-    }
-
-    private H4 createH4(String text) {
-        H4 h4 = new H4(text);
-        h4.addClassNames(Typography.Body.M, Margin.Bottom._4, Margin.Top._8);
-        return h4;
     }
 
     private void addButtons(String... themes) {

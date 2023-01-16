@@ -1,0 +1,71 @@
+:host([theme~="chip"]) {
+    --height: 32px;
+    --padding: 0 16px;
+    --shape: 8px;
+
+    --hover-background: var(--md-on-surface-variant);
+    --focus-background: var(--md-on-surface-variant);
+    --pressed-background: var(--md-on-surface-variant);
+}
+
+:host([theme~="chip"][theme~="assist"]:not([theme~="elevated"])),
+:host([theme~="chip"][theme~="filter"]:not([aria-pressed="true"]):not([theme~="elevated"])) {
+    --background: var(--md-surface);
+    --outline: 1px solid var(--md-outline);
+
+    --disabled-background: none;
+    --disabled-outline-color: var(--md-on-surface-variant);
+    --focus-outline-color: var(--md-on-surface);
+    --pressed-outline-color: var(--md-outline);
+}
+
+/* Filter */
+:host([theme~="chip"][theme~="filter"][aria-pressed="true"]) {
+    --background: var(--md-secondary-container);
+}
+
+:host([theme~="chip"][theme~="filter"][aria-pressed="true"]) [part='prefix'] {
+    color: var(--md-on-secondary-container);
+    margin-inline-end: var(--padding-between-elements);
+    margin-inline-start: calc(var(--padding-between-elements) * -1);
+    overflow: hidden;
+    width: var(--icon-size);
+}
+
+:host([theme~="chip"][theme~="filter"][aria-pressed="true"]) [part="prefix"]::before {
+    content: "check";
+    display: inline-block;
+    direction: ltr;
+    font-family: 'Material Icons';
+    font-feature-settings: 'liga';
+    font-size: var(--icon-size);
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+:host([theme~="chip"][theme~="filter"][aria-pressed="true"]) [part='prefix'] ::slotted(*) {
+    display: none !important;
+}
+
+/* Elevated */
+:host([theme~="chip"][theme~="elevated"]) {
+    --background: var(--md-surface-1);
+    --color: var(--md-on-surface);
+}
+
+/* Icon */
+:host([theme~="chip"]) [part='prefix'] {
+    color: var(--md-primary);
+}
+
+:host([theme~="chip"][disabled]) [part='prefix'] {
+    color: var(--md-on-surface);
+}

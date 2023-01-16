@@ -1,0 +1,7 @@
+:host {
+
+}
+
+[part='overlay'] {
+    background: var(--md-surface-1);
+}

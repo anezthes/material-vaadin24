@@ -31,7 +31,11 @@ html {
     --md-outline: var(--md-neutral-variant-50);
     --md-outline-variant: var(--md-neutral-variant-80);
 
-    --md-surface-tint-color: var(--md-primary);
+    --md-surface-1: rgba(103, 80, 164, 0.05);
+    --md-surface-2: rgba(103, 80, 164, 0.08);
+    --md-surface-3: rgba(103, 80, 164, 0.11);
+    --md-surface-4: rgba(103, 80, 164, 0.12);
+    --md-surface-5: rgba(103, 80, 164, 0.14);
 
     --md-inverse-surface: var(--md-neutral-20);
     --md-inverse-on-surface: var(--md-neutral-95);
@@ -158,7 +162,11 @@ html {
 
     --md-outline: var(--md-neutral-variant-60);
 
-    --md-surface-tint-color: var(--md-primary);
+    --md-surface-1: rgba(208, 188, 255, 0.05);
+    --md-surface-2: rgba(208, 188, 255, 0.08);
+    --md-surface-3: rgba(208, 188, 255, 0.11);
+    --md-surface-4: rgba(208, 188, 255, 0.12);
+    --md-surface-5: rgba(208, 188, 255, 0.14);
 
     --md-inverse-surface: var(--md-neutral-90);
     --md-inverse-on-surface: var(--md-neutral-20);

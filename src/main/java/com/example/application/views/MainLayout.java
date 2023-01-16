@@ -13,6 +13,7 @@ import com.vaadin.flow.router.PageTitle;
 @CssImport("/themes/material/styles.css")
 @CssImport(value = "/themes/material/components/app-layout.css", themeFor = "vaadin-app-layout")
 @CssImport(value = "/themes/material/components/button.css", themeFor = "vaadin-button")
+@CssImport(value = "/themes/material/components/dialog.css", themeFor = "vaadin-dialog-overlay")
 @CssImport(value = "/themes/material/components/drawer-toggle.css", themeFor = "vaadin-drawer-toggle")
 @CssImport(value = "/themes/material/components/input-container.css", themeFor = "vaadin-input-container")
 @CssImport(value = "/themes/material/components/text-field.css", themeFor = "vaadin-text-field")
@@ -82,7 +83,7 @@ public class MainLayout extends AppLayout {
                 new NavigationDrawerItem(ButtonsView.class, "Buttons", MaterialIcon.ADS_CLICK, "26"),
                 new NavigationDrawerItem(IconButtonsView.class, "Icon buttons", MaterialIcon.FAVORITE),
                 new NavigationDrawerItem(CardsView.class, "Cards", MaterialIcon.DASHBOARD, "100+"),
-                new NavigationDrawerItem(ChipsView.class, "Chips", MaterialIcon.FAVORITE),
+                new NavigationDrawerItem(ChipsView.class, "Chips", MaterialIcon.MEMORY),
                 new NavigationDrawerItem(DialogsView.class, "Dialogs", MaterialIcon.WEB_ASSET),
                 new NavigationDrawerItem(NavigationBarView.class, "Navigation bar", MaterialIcon.CIRCLE),
                 new NavigationDrawerItem(NavigationDrawerView.class, "Navigation drawer", MaterialIcon.MENU),

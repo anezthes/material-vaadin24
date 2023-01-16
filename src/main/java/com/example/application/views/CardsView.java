@@ -6,38 +6,30 @@ import com.example.application.componentthemes.CardTheme;
 import com.example.application.utilityclasses.*;
 import com.vaadin.flow.component.Unit;
 import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.html.*;
+import com.vaadin.flow.component.html.Div;
+import com.vaadin.flow.component.html.Image;
+import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
 @PageTitle("Cards")
 @Route(value = "cards", layout = MainLayout.class)
-public class CardsView extends Main {
+public class CardsView extends View {
 
     public CardsView() {
-        addClassNames(Padding._6);
+        super("Cards");
 
-        H2 title = new H2("Cards");
-        title.addClassNames(Typography.Display.L, Margin._0);
-        add(title);
-
-        add(createH3("Elevated"));
+        addH3("Elevated");
         addCard(CardTheme.ELEVATED);
 
-        add(createH3("Filled"));
+        addH3("Filled");
         addCard(CardTheme.FILLED);
 
-        add(createH3("Outlined"));
+        addH3("Outlined");
         addCard(CardTheme.OUTLINED);
 
-        add(createH3("Examples"));
+        addH3("Examples");
         addCardExamples();
-    }
-
-    private H3 createH3(String text) {
-        H3 h3 = new H3(text);
-        h3.addClassNames(Typography.Body.M, Margin.Bottom._4, Margin.Top._8);
-        return h3;
     }
 
     private void addCard(String theme) {
