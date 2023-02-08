@@ -1,8 +1,8 @@
 package com.example.application.views;
 
 import com.example.application.MaterialIcon;
-import com.example.application.components.BottomAppBar;
-import com.example.application.componentthemes.ButtonTheme;
+import com.example.application.components.appbars.BottomAppBar;
+import com.example.application.themes.ButtonTheme;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;

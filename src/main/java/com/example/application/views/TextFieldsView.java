@@ -1,12 +1,11 @@
 package com.example.application.views;
 
 import com.example.application.MaterialIcon;
+import com.example.application.components.Layout;
 import com.example.application.components.MDTextField;
-import com.example.application.componentthemes.TextFieldTheme;
-import com.example.application.utilityclasses.Display;
-import com.example.application.utilityclasses.FlexWrap;
-import com.example.application.utilityclasses.Gap;
-import com.vaadin.flow.component.html.Div;
+import com.example.application.themes.TextFieldTheme;
+import com.example.application.utilities.enums.FlexWrap;
+import com.example.application.utilities.enums.Gap;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
@@ -27,8 +26,9 @@ public class TextFieldsView extends View {
     }
 
     private void addTextFields(String theme) {
-        Div fields = new Div();
-        fields.addClassNames(Display.FLEX, FlexWrap.WRAP, Gap._6);
+        Layout fields = new Layout();
+        fields.setFlexWrap(FlexWrap.WRAP);
+        fields.setGap(Gap._6);
         add(fields);
 
         TextField field = new MDTextField("Label text");

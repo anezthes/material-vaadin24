@@ -1,11 +1,14 @@
 package com.example.application.views;
 
 import com.example.application.MaterialIcon;
-import com.example.application.components.BasicDialog;
-import com.example.application.componentthemes.ButtonTheme;
-import com.vaadin.flow.component.Text;
+import com.example.application.components.dialogs.BasicDialog;
+import com.example.application.components.dialogs.FullScreenDialog;
+import com.example.application.themes.ButtonTheme;
+import com.example.application.themes.TextFieldTheme;
+import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.dialog.Dialog;
+import com.vaadin.flow.component.textfield.EmailField;
+import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
@@ -32,8 +35,24 @@ public class DialogsView extends View {
         ).open());
         open.addThemeName(ButtonTheme.TEXT);
         add(open);
+
+        open = new Button("Full-screen dialog", e -> new FullScreenDialog(
+                "Full-screen dialog title",
+                createFullScreenDialogContent()
+        ).open());
+        open.addThemeName(ButtonTheme.TEXT);
+        add(open);
     }
 
+    private Component[] createFullScreenDialogContent() {
+        EmailField email = new EmailField("Email");
+        email.setValue("leevillanuevanotes@gmail.com");
+        email.addThemeName(TextFieldTheme.OUTLINED);
 
+        TextField event = new TextField("Event");
+        event.addThemeName(TextFieldTheme.OUTLINED);
+
+        return new Component[] { email, event };
+    }
 
 }

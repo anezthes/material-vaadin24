@@ -1,0 +1,44 @@
+/* Left */
+.left-0 {
+    left: 0;
+}
+
+.left-1 {
+    left: var(--md-space-1);
+}
+
+.left-2 {
+    left: var(--md-space-2);
+}
+
+.left-3 {
+    left: var(--md-space-3);
+}
+
+.left-4 {
+    left: var(--md-space-4);
+}
+
+.left-5 {
+    left: var(--md-space-5);
+}
+
+.left-6 {
+    left: var(--md-space-6);
+}
+
+.left-7 {
+    left: var(--md-space-7);
+}
+
+.left-8 {
+    left: var(--md-space-8);
+}
+
+.left-9 {
+    left: var(--md-space-9);
+}
+
+.left-10 {
+    left: var(--md-space-10);
+}

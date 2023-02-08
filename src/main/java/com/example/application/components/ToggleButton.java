@@ -1,7 +1,7 @@
 package com.example.application.components;
 
 import com.example.application.MaterialIcon;
-import com.example.application.componentthemes.ButtonTheme;
+import com.example.application.themes.ButtonTheme;
 import com.vaadin.flow.component.button.Button;
 
 public class ToggleButton extends Button {

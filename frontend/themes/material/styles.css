@@ -14,6 +14,7 @@
 @import url('./components/top-app-bar.css');
 @import url('./color.css');
 @import url('./elevation.css');
+@import url('./inset.css');
 @import url('./shape.css');
 @import url('./spacing.css');
 @import url('./typography.css');
@@ -24,14 +25,14 @@ html {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 
-    /* === DRAWER === */
+    /* === Drawer === */
     --md-drawer-padding: 12px;
     --md-drawer-shape: 0 16px 16px 0;
     --md-drawer-width: 360px;
 
     --md-drawer-scrim: rgba(0, 0, 0, 0.32);
 
-    /* === DRAWER ITEM === */
+    /* === Drawer item === */
     --md-drawer-item-height: 56px;
     --md-drawer-item-icon-size: 24px;
     --md-drawer-item-padding: 0 24px 0 16px;
@@ -42,7 +43,7 @@ html {
     --md-drawer-item-focus-opacity: 0.12;
     --md-drawer-item-pressed-opacity: 0.12;
 
-    /* === TOP APP BAR === */
+    /* === Top app bar === */
     --md-top-app-bar-icon-size: 24px;
     --md-top-app-bar-target-size: 48px;
     --md-top-app-bar-avatar-size: 30px;

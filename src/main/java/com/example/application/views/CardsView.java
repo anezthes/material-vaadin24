@@ -1,16 +1,22 @@
 package com.example.application.views;
 
 import com.example.application.components.Card;
-import com.example.application.componentthemes.ButtonTheme;
-import com.example.application.componentthemes.CardTheme;
-import com.example.application.utilityclasses.*;
+import com.example.application.components.Column;
+import com.example.application.components.Layout;
+import com.example.application.themes.ButtonTheme;
+import com.example.application.themes.CardTheme;
+import com.example.application.utilities.classes.Margin;
+import com.example.application.utilities.classes.Padding;
+import com.example.application.utilities.classes.Typography;
+import com.example.application.utilities.enums.Gap;
+import com.example.application.utilities.enums.JustifyContent;
 import com.vaadin.flow.component.Unit;
 import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.theme.lumo.LumoUtility;
 
 @PageTitle("Cards")
 @Route(value = "cards", layout = MainLayout.class)
@@ -42,14 +48,14 @@ public class CardsView extends View {
     }
 
     private void addCardExamples() {
-        Div cards = new Div(
+        Column cards = new Column(
                 createCardExample1(CardTheme.ELEVATED),
                 createCardExample2(CardTheme.OUTLINED),
                 createCardExample3(CardTheme.ELEVATED),
                 createCardExample4(CardTheme.FILLED),
                 createCardExample5(CardTheme.OUTLINED)
         );
-        cards.addClassNames(Display.FLEX, FlexDirection.COLUMN, Gap._4);
+        cards.setGap(Gap._4);
         add(cards);
     }
 
@@ -63,14 +69,16 @@ public class CardsView extends View {
         Span supportingText = new Span("Supporting text");
         supportingText.addClassNames(Typography.Body.M);
 
-        Div text = new Div(headline, supportingText);
-        text.addClassNames(Display.FLEX, FlexDirection.COLUMN, Gap._1, Padding.Bottom._2, Padding.Horizontal._4, Padding.Top._3);
+        Column text = new Column(headline, supportingText);
+        text.addClassNames(Padding.Bottom._2, Padding.Horizontal._4, Padding.Top._3);
+        text.setGap(Gap._1);
 
         Button button = new Button("Button");
         button.addThemeName(ButtonTheme.FILLED);
 
-        Div buttons = new Div(button);
-        buttons.addClassNames(Display.FLEX, Gap._2, Padding._4);
+        Layout buttons = new Layout(button);
+        buttons.addClassNames(Padding._4);
+        buttons.setGap(Gap._2);
 
         Card card = new Card(image, text, buttons);
         card.addThemeName(theme);
@@ -91,11 +99,9 @@ public class CardsView extends View {
         Span supportingText = new Span("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.");
         supportingText.addClassNames(Typography.Body.M);
 
-        Div text = new Div(headline, subhead, supportingText);
-        text.addClassNames(
-                Display.FLEX, FlexDirection.COLUMN, Gap._3,
-                Padding.Bottom._4, Padding.Horizontal._6, Padding.Top._6
-        );
+        Column text = new Column(headline, subhead, supportingText);
+        text.addClassNames(Padding.Bottom._4, Padding.Horizontal._6, Padding.Top._6);
+        text.setGap(Gap._3);
 
         Button button1 = new Button("Button");
         button1.addThemeName(ButtonTheme.OUTLINED);
@@ -103,8 +109,10 @@ public class CardsView extends View {
         Button button2 = new Button("Button");
         button2.addThemeName(ButtonTheme.FILLED);
 
-        Div buttons = new Div(button1, button2);
-        buttons.addClassNames(JustifyContent.END, Display.FLEX, Gap._2, Padding._4);
+        Layout buttons = new Layout(button1, button2);
+        buttons.addClassNames(Padding._4);
+        buttons.setJustifyContent(JustifyContent.END);
+        buttons.setGap(Gap._2);
 
         Card card = new Card(image, text, buttons);
         card.addThemeName(theme);
@@ -125,11 +133,8 @@ public class CardsView extends View {
         Span supportingText = new Span("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.");
         supportingText.addClassNames(Typography.Body.S);
 
-        Div text = new Div(headline, subhead, supportingText);
-        text.addClassNames(
-                Display.FLEX, FlexDirection.COLUMN,
-                Padding.Bottom._5, Padding.Horizontal._3, Padding.Top._4
-        );
+        Column text = new Column(headline, subhead, supportingText);
+        text.addClassNames(Padding.Bottom._5, Padding.Horizontal._3, Padding.Top._4);
 
         Card card = new Card(image, text);
         card.addThemeName(theme);
@@ -144,20 +149,18 @@ public class CardsView extends View {
         Span supportingText = new Span("Supporting text");
         supportingText.addClassNames(Typography.Body.M);
 
-        Div text = new Div(headline, supportingText);
-        text.addClassNames(
-                Display.FLEX, FlexDirection.COLUMN,
-                Padding._4
-        );
+        Column text = new Column(headline, supportingText);
+        text.addClassNames(Padding._4);
 
         Button button = new Button("Button");
         button.addThemeName(ButtonTheme.FILLED);
 
-        Div buttons = new Div(button);
-        buttons.addClassNames(Display.FLEX, Gap._2, Padding._4);
+        Layout buttons = new Layout(button);
+        buttons.addClassNames(Padding._4);
+        buttons.setGap(Gap._2);
 
         Card card = new Card(text, buttons);
-        card.addClassNames(JustifyContent.BETWEEN);
+        card.addClassNames(LumoUtility.JustifyContent.BETWEEN);
         card.addThemeName(theme);
         card.setHeight(168, Unit.PIXELS);
         card.setWidth(360, Unit.PIXELS);
@@ -174,11 +177,9 @@ public class CardsView extends View {
         Span supportingText = new Span("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.");
         supportingText.addClassNames(Typography.Body.M);
 
-        Div text = new Div(headline, subhead, supportingText);
-        text.addClassNames(
-                Display.FLEX, FlexDirection.COLUMN, Gap._1,
-                Padding.Bottom._10, Padding.Horizontal._4, Padding.Top._9
-        );
+        Column text = new Column(headline, subhead, supportingText);
+        text.addClassNames(Padding.Bottom._10, Padding.Horizontal._4, Padding.Top._9);
+        text.setGap(Gap._1);
 
         Image image = new Image("https://images.unsplash.com/photo-1451187580459-43490279c0fa", "Photo of Gulf of Mexico, United States by NASA");
         image.addClassNames(Margin.Horizontal._4);
@@ -186,11 +187,13 @@ public class CardsView extends View {
         Button button = new Button("Button");
         button.addThemeName(ButtonTheme.FILLED);
 
-        Div buttons = new Div(button);
-        buttons.addClassNames(Display.FLEX, Gap._2, JustifyContent.END, Padding._4);
+        Layout buttons = new Layout(button);
+        buttons.addClassNames(Padding._4);
+        buttons.setGap(Gap._2);
+        buttons.setJustifyContent(JustifyContent.END);
 
         Card card = new Card(text, image, buttons);
-        card.addClassNames(JustifyContent.BETWEEN);
+        card.addClassNames(LumoUtility.JustifyContent.BETWEEN);
         card.addThemeNames(themes);
         card.setWidth(360, Unit.PIXELS);
         return card;

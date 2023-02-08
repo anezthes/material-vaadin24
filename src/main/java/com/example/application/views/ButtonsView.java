@@ -1,13 +1,12 @@
 package com.example.application.views;
 
 import com.example.application.MaterialIcon;
-import com.example.application.componentthemes.ButtonTheme;
-import com.example.application.utilityclasses.Display;
-import com.example.application.utilityclasses.FlexWrap;
-import com.example.application.utilityclasses.Gap;
+import com.example.application.components.Layout;
+import com.example.application.themes.ButtonTheme;
+import com.example.application.utilities.enums.FlexWrap;
+import com.example.application.utilities.enums.Gap;
 import com.vaadin.flow.component.HasComponents;
 import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
@@ -49,8 +48,9 @@ public class ButtonsView extends View {
     }
 
     private void addButtons(String theme) {
-        Div buttons = new Div();
-        buttons.addClassNames(Display.FLEX, FlexWrap.WRAP, Gap._4);
+        Layout buttons = new Layout();
+        buttons.setFlexWrap(FlexWrap.WRAP);
+        buttons.setGap(Gap._4);
         add(buttons);
 
         if (theme.equals(ButtonTheme.FAB) || theme.equals(ButtonTheme.FAB_SMALL) || theme.equals(ButtonTheme.FAB_LARGE)) {

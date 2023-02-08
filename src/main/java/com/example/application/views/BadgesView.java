@@ -1,10 +1,8 @@
 package com.example.application.views;
 
 import com.example.application.components.Badge;
-import com.example.application.utilityclasses.Display;
-import com.example.application.utilityclasses.FlexDirection;
-import com.example.application.utilityclasses.Gap;
-import com.vaadin.flow.component.html.Div;
+import com.example.application.components.Column;
+import com.example.application.utilities.enums.Gap;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
@@ -18,12 +16,12 @@ public class BadgesView extends View {
     }
 
     private void addBadges() {
-        Div badges = new Div(
+        Column badges = new Column(
                 new Badge(),
                 new Badge("1"),
                 new Badge("999+")
         );
-        badges.addClassNames(Display.FLEX, FlexDirection.COLUMN, Gap._4);
+        badges.setGap(Gap._4);
         add(badges);
     }
 

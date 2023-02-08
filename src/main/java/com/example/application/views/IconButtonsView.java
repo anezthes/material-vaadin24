@@ -1,12 +1,11 @@
 package com.example.application.views;
 
 import com.example.application.MaterialIcon;
+import com.example.application.components.Layout;
 import com.example.application.components.ToggleButton;
-import com.example.application.componentthemes.ButtonTheme;
-import com.example.application.utilityclasses.Display;
-import com.example.application.utilityclasses.Gap;
+import com.example.application.themes.ButtonTheme;
+import com.example.application.utilities.enums.Gap;
 import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
@@ -47,8 +46,8 @@ public class IconButtonsView extends View {
     }
 
     private void addButtons(String... themes) {
-        Div buttons = new Div();
-        buttons.addClassNames(Display.FLEX, Gap._4);
+        Layout buttons = new Layout();
+        buttons.setGap(Gap._4);
         add(buttons);
 
         Button button = new Button(MaterialIcon.FAVORITE.create());
@@ -62,8 +61,8 @@ public class IconButtonsView extends View {
     }
 
     private void addToggles(String... themes) {
-        Div toggles = new Div();
-        toggles.addClassNames(Display.FLEX, Gap._4);
+        Layout toggles = new Layout();
+        toggles.setGap(Gap._4);
         add(toggles);
 
         ToggleButton toggle = new ToggleButton(MaterialIcon.FAVORITE, MaterialIcon.FAVORITE_OUTLINE, "Label");

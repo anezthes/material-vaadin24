@@ -1,9 +1,9 @@
-/* === BACKDROP === */
+/* === Backdrop === */
 [part='backdrop'] {
     background: var(--md-drawer-scrim);
 }
 
-/* === DRAWER === */
+/* === Drawer === */
 [part="drawer"] {
     background: var(--md-surface);
     border-radius: var(--md-drawer-shape);

@@ -1,7 +1,7 @@
 package com.example.application.views;
 
-import com.example.application.components.TopAppBar;
-import com.example.application.utilityclasses.Surface;
+import com.example.application.components.appbars.TopAppBar;
+import com.example.application.utilities.classes.Surface;
 import com.vaadin.flow.component.Unit;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;

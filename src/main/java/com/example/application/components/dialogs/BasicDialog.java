@@ -1,8 +1,8 @@
-package com.example.application.components;
+package com.example.application.components.dialogs;
 
 import com.example.application.MaterialIcon;
-import com.example.application.componentthemes.ButtonTheme;
-import com.example.application.componentthemes.DialogTheme;
+import com.example.application.themes.ButtonTheme;
+import com.example.application.themes.DialogTheme;
 import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dialog.Dialog;

@@ -1,10 +1,8 @@
 package com.example.application.views;
 
-import com.example.application.utilityclasses.Display;
-import com.example.application.utilityclasses.FlexDirection;
-import com.example.application.utilityclasses.Gap;
-import com.example.application.utilityclasses.Typography;
-import com.vaadin.flow.component.html.Div;
+import com.example.application.components.Column;
+import com.example.application.utilities.classes.Typography;
+import com.example.application.utilities.enums.Gap;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
@@ -34,8 +32,8 @@ public class TypographyView extends View {
     }
 
     private void addTexts(String... classNames) {
-        Div texts = new Div();
-        texts.addClassNames(Display.FLEX, FlexDirection.COLUMN, Gap._4);
+        Column texts = new Column();
+        texts.setGap(Gap._4);
 
         for (String className : classNames) {
             Span text = new Span(

@@ -1,4 +1,4 @@
-package com.example.application.utilityclasses;
+package com.example.application.utilities.classes;
 
 public enum Color {
 

@@ -22,6 +22,7 @@
     height: auto;
     position: relative;
     top: auto;
+    vertical-align: bottom;
     width: auto;
 }
 [part='icon']::after {
@@ -29,9 +30,6 @@
 }
 
 /* Icon */
-[part='icon'] {
-    display: flex;
-}
 [part='icon']::before {
     content: "menu";
     direction: ltr;

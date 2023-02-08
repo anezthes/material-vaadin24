@@ -1,4 +1,4 @@
-package com.example.application.componentthemes;
+package com.example.application.themes;
 
 public class ButtonTheme {
     public static String ELEVATED = "elevated";

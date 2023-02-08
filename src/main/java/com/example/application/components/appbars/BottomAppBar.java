@@ -1,6 +1,6 @@
-package com.example.application.components;
+package com.example.application.components.appbars;
 
-import com.example.application.utilityclasses.Surface;
+import com.example.application.utilities.classes.Surface;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Footer;

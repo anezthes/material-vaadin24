@@ -1,5 +1,4 @@
 :host {
-    --shape: 28px;
     --icon-size: 24px;
     --max-width: 560px;
     --min-width: 280px;
@@ -8,6 +7,10 @@
     --padding-between-body-actions: 24px;
     --padding-between-icon-title: 16px;
     --padding-between-title-body: 16px;
+    --shape: 28px;
+
+    --header-height: auto;
+    --header-padding: var(--padding) var(--padding) var(--padding-between-title-body) var(--padding);
 }
 
 [part='backdrop'] {
@@ -23,7 +26,8 @@
 }
 
 [part='header'] {
-    padding: var(--padding) var(--padding) var(--padding-between-title-body) var(--padding);
+    height: var(--header-height);
+    padding: var(--header-padding);
 }
 
 :host([theme~='icon']) [part='header'] {
@@ -52,4 +56,27 @@
 [part='footer'] {
     gap: var(--padding-between-buttons);
     padding: var(--padding-between-body-actions) var(--padding) var(--padding) var(--padding);
+}
+
+/* === Full-screen === */
+:host([theme~="full-screen"]) {
+    --max-width: 100%;
+    --min-width: 100%;
+    --shape: 0;
+
+    --header-height: 56px;
+    --header-padding: 0 var(--padding) 0 var(--md-space-14);
+
+    inset: 0;
+}
+
+:host([theme~="full-screen"]) [part='title'] {
+    font-size: var(--md-title-large-size);
+    font-weight: var(--md-title-large-weight);
+    letter-spacing: var(--md-title-large-tracking);
+    line-height: var(--md-title-large-line-height);
+}
+
+:host([theme~="full-screen"]) [part='content'] {
+    padding: var(--padding)
 }

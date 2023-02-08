@@ -1,4 +1,4 @@
-package com.example.application.components;
+package com.example.application.components.appbars;
 
 import com.example.application.MaterialIcon;
 import com.vaadin.flow.component.applayout.DrawerToggle;

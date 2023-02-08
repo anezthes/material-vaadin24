@@ -1,7 +1,7 @@
 package com.example.application.components.chips;
 
 import com.example.application.MaterialIcon;
-import com.example.application.componentthemes.ChipTheme;
+import com.example.application.themes.ChipTheme;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.HasTheme;
 import com.vaadin.flow.component.button.Button;

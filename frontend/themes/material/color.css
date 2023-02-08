@@ -1,4 +1,4 @@
-/* === LIGHT === */
+/* === Light === */
 html {
     --md-primary: var(--md-primary-40);
     --md-on-primary: var(--md-primary-100);
@@ -130,7 +130,7 @@ html {
     --md-disabled-container-opacity: 0.12;
 }
 
-/* === DARK === */
+/* === Dark === */
 [theme~="dark"] {
     --md-primary: var(--md-primary-80);
     --md-on-primary: var(--md-primary-20);

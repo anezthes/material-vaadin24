@@ -1,7 +1,7 @@
 package com.example.application.views;
 
-import com.example.application.utilityclasses.Margin;
-import com.example.application.utilityclasses.Padding;
+import com.example.application.utilities.classes.Margin;
+import com.example.application.utilities.classes.Padding;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.html.H4;
