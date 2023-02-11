@@ -11,6 +11,8 @@
 
     --header-height: auto;
     --header-padding: var(--padding) var(--padding) var(--padding-between-title-body) var(--padding);
+
+    --text-field-label-background: linear-gradient(var(--md-surface-1), var(--md-surface-1)), var(--md-background);
 }
 
 [part='backdrop'] {
@@ -18,8 +20,7 @@
 }
 
 [part='overlay'] {
-    background-color: var(--md-background);
-    background-image: linear-gradient(var(--md-surface-1), var(--md-surface-1));
+    background: linear-gradient(var(--md-surface-1), var(--md-surface-1)), var(--md-background);
     border-radius: var(--shape);
     max-width: var(--max-width);
     min-width: var(--min-width);

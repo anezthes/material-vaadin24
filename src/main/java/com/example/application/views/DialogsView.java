@@ -1,14 +1,20 @@
 package com.example.application.views;
 
 import com.example.application.MaterialIcon;
+import com.example.application.components.Column;
 import com.example.application.components.dialogs.BasicDialog;
 import com.example.application.components.dialogs.FullScreenDialog;
 import com.example.application.themes.ButtonTheme;
 import com.example.application.themes.TextFieldTheme;
+import com.example.application.utilities.enums.Gap;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.checkbox.Checkbox;
+import com.vaadin.flow.component.combobox.ComboBox;
+import com.vaadin.flow.component.datepicker.DatePicker;
 import com.vaadin.flow.component.textfield.EmailField;
 import com.vaadin.flow.component.textfield.TextField;
+import com.vaadin.flow.component.timepicker.TimePicker;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
@@ -44,7 +50,7 @@ public class DialogsView extends View {
         add(open);
     }
 
-    private Component[] createFullScreenDialogContent() {
+    private Component createFullScreenDialogContent() {
         EmailField email = new EmailField("Email");
         email.setValue("leevillanuevanotes@gmail.com");
         email.addThemeName(TextFieldTheme.OUTLINED);
@@ -52,7 +58,22 @@ public class DialogsView extends View {
         TextField event = new TextField("Event");
         event.addThemeName(TextFieldTheme.OUTLINED);
 
-        return new Component[] { email, event };
+        DatePicker from = new DatePicker("From");
+        from.addThemeName(TextFieldTheme.OUTLINED);
+
+        DatePicker to = new DatePicker("To");
+        to.addThemeName(TextFieldTheme.OUTLINED);
+
+        Checkbox allday = new Checkbox("All day");
+
+        ComboBox timezone = new ComboBox("Timezone");
+        timezone.addThemeName(TextFieldTheme.OUTLINED);
+        timezone.setItems("Pacific Standard Time");
+        timezone.setValue("Pacific Standard Time");
+
+        Column form = new Column(email, event, from, to, allday, timezone);
+        form.setGap(Gap._6);
+        return form;
     }
 
 }

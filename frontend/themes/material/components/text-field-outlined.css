@@ -21,7 +21,7 @@
 :host([theme~="outlined"][has-value]) [part='label'],
 :host([theme~="outlined"][prefix]) [part='label'],
 :host([theme~="outlined"][suffix]) [part='label'] {
-    background: var(--md-surface);
+    background: var(--text-field-label-background, var(--md-surface));
     left: 12px;
     padding: 0 4px;
     top: -8px;

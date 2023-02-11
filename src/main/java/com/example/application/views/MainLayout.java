@@ -16,6 +16,8 @@ import com.vaadin.flow.router.PageTitle;
 @CssImport(value = "/themes/material/components/dialog.css", themeFor = "vaadin-dialog-overlay")
 @CssImport(value = "/themes/material/components/drawer-toggle.css", themeFor = "vaadin-drawer-toggle")
 @CssImport(value = "/themes/material/components/input-container.css", themeFor = "vaadin-input-container")
+@CssImport(value = "/themes/material/components/text-field.css", themeFor = "vaadin-combo-box")
+@CssImport(value = "/themes/material/components/text-field.css", themeFor = "vaadin-date-picker")
 @CssImport(value = "/themes/material/components/text-field.css", themeFor = "vaadin-text-field")
 @PageTitle("Material Design 3 for Vaadin 23")
 public class MainLayout extends AppLayout {
@@ -81,7 +83,6 @@ public class MainLayout extends AppLayout {
                 new NavigationDrawerItem(BadgesView.class, "Badges", MaterialIcon.BADGE),
                 new NavigationDrawerItem(BottomAppBarView.class, "Bottom app bar", MaterialIcon.VERTICAL_ALIGN_BOTTOM),
                 new NavigationDrawerItem(ButtonsView.class, "Buttons", MaterialIcon.ADS_CLICK, "26"),
-                new NavigationDrawerItem(IconButtonsView.class, "Icon buttons", MaterialIcon.FAVORITE),
                 new NavigationDrawerItem(CardsView.class, "Cards", MaterialIcon.DASHBOARD, "100+"),
                 new NavigationDrawerItem(ChipsView.class, "Chips", MaterialIcon.MEMORY),
                 new NavigationDrawerItem(DialogsView.class, "Dialogs", MaterialIcon.WEB_ASSET),

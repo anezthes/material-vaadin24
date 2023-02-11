@@ -2,6 +2,7 @@ package com.example.application.views;
 
 import com.example.application.MaterialIcon;
 import com.example.application.components.Layout;
+import com.example.application.components.ToggleButton;
 import com.example.application.themes.ButtonTheme;
 import com.example.application.utilities.enums.FlexWrap;
 import com.example.application.utilities.enums.Gap;
@@ -45,6 +46,34 @@ public class ButtonsView extends View {
 
         addH3("Extended FAB");
         addButtons(ButtonTheme.FAB_EXTENDED);
+
+        addH3("Icon button (no toggle)");
+
+        addH4("Standard");
+        addIconButtons();
+
+        addH4("Filled");
+        addIconButtons(ButtonTheme.FILLED);
+
+        addH4("Filled tonal");
+        addIconButtons(ButtonTheme.FILLED_TONAL);
+
+        addH4("Outlined");
+        addIconButtons(ButtonTheme.OUTLINED);
+
+        addH3("Icon button (toggle)");
+
+        addH4("Standard");
+        addIconToggles();
+
+        addH4("Filled");
+        addIconToggles(ButtonTheme.FILLED);
+
+        addH4("Filled tonal");
+        addIconToggles(ButtonTheme.FILLED_TONAL);
+
+        addH4("Outlined");
+        addIconToggles(ButtonTheme.OUTLINED);
     }
 
     private void addButtons(String theme) {
@@ -88,6 +117,36 @@ public class ButtonsView extends View {
         button.addThemeName(theme);
         button.setEnabled(false);
         container.add(button);
+    }
+
+    private void addIconButtons(String... themes) {
+        Layout buttons = new Layout();
+        buttons.setGap(Gap._4);
+        add(buttons);
+
+        Button button = new Button(MaterialIcon.FAVORITE.create());
+        button.addThemeNames(themes);
+        buttons.add(button);
+
+        button = new Button(MaterialIcon.FAVORITE.create());
+        button.addThemeNames(themes);
+        button.setEnabled(false);
+        buttons.add(button);
+    }
+
+    private void addIconToggles(String... themes) {
+        Layout toggles = new Layout();
+        toggles.setGap(Gap._4);
+        add(toggles);
+
+        ToggleButton toggle = new ToggleButton(MaterialIcon.FAVORITE, MaterialIcon.FAVORITE_OUTLINE, "Label");
+        toggle.addThemeNames(themes);
+        toggles.add(toggle);
+
+        toggle = new ToggleButton(MaterialIcon.FAVORITE, MaterialIcon.FAVORITE_OUTLINE, "Label");
+        toggle.addThemeNames(themes);
+        toggle.setEnabled(false);
+        toggles.add(toggle);
     }
 
 }

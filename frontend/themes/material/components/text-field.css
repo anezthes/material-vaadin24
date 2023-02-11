@@ -8,9 +8,7 @@
     --leading-icon-offset: 52px;
     --trailing-icon-size: 24px;
     --trailing-icon-offset: 52px;
-}
 
-.vaadin-field-container {
     position: relative;
 }
 
