@@ -10,15 +10,15 @@ import com.vaadin.flow.component.html.Nav;
 import com.vaadin.flow.component.html.UnorderedList;
 import com.vaadin.flow.router.PageTitle;
 
-@CssImport("/themes/material/styles.css")
-@CssImport(value = "/themes/material/components/app-layout.css", themeFor = "vaadin-app-layout")
-@CssImport(value = "/themes/material/components/button.css", themeFor = "vaadin-button")
-@CssImport(value = "/themes/material/components/dialog.css", themeFor = "vaadin-dialog-overlay")
-@CssImport(value = "/themes/material/components/drawer-toggle.css", themeFor = "vaadin-drawer-toggle")
-@CssImport(value = "/themes/material/components/input-container.css", themeFor = "vaadin-input-container")
-@CssImport(value = "/themes/material/components/text-field.css", themeFor = "vaadin-combo-box")
-@CssImport(value = "/themes/material/components/text-field.css", themeFor = "vaadin-date-picker")
-@CssImport(value = "/themes/material/components/text-field.css", themeFor = "vaadin-text-field")
+@CssImport("./themes/material/styles.css")
+@CssImport(value = "./themes/material/components/app-layout.css", themeFor = "vaadin-app-layout")
+@CssImport(value = "./themes/material/components/button.css", themeFor = "vaadin-button")
+@CssImport(value = "./themes/material/components/dialog.css", themeFor = "vaadin-dialog-overlay")
+@CssImport(value = "./themes/material/components/drawer-toggle.css", themeFor = "vaadin-drawer-toggle")
+@CssImport(value = "./themes/material/components/input-container.css", themeFor = "vaadin-input-container")
+@CssImport(value = "./themes/material/components/text-field.css", themeFor = "vaadin-combo-box")
+@CssImport(value = "./themes/material/components/text-field.css", themeFor = "vaadin-date-picker")
+@CssImport(value = "./themes/material/components/text-field.css", themeFor = "vaadin-text-field")
 @PageTitle("Material Design 3 for Vaadin 23")
 public class MainLayout extends AppLayout {
 
