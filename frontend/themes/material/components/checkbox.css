@@ -1,0 +1,43 @@
+:host {
+    --vaadin-checkbox-size: 18px;
+
+    --icon-size: 18px;
+    --outline: 2px solid var(--md-on-surface-variant);
+    --shape: 2px;
+
+}
+
+[part='checkbox'] {
+    align-items: center;
+    border: var(--outline);
+    border-radius: var(--shape);
+    box-sizing: border-box;
+    color: transparent;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+[part='checkbox']::before {
+    content: 'check';
+    direction: ltr;
+    display: inline-block;
+    font-family: 'Material Icons';
+    font-size: var(--icon-size);
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Checked */
+:host([checked]) [part='checkbox'] {
+    background: var(--md-primary);
+    border-color: transparent;
+    color: var(--md-on-primary);
+}

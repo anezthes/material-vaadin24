@@ -31,21 +31,22 @@ public class ChipsView extends View {
         addInputChips();
     }
 
-    private void addAssistChips() {
+    private Layout createChipsLayout(String... classNames) {
         Layout chips = new Layout();
-        chips.addClassNames(Margin.Bottom._4);
+        chips.addClassNames(classNames);
         chips.setFlexWrap(FlexWrap.WRAP);
         chips.setGap(Gap._4);
         add(chips);
 
+        return chips;
+    }
+
+    private void addAssistChips() {
+        Layout chips = createChipsLayout(Margin.Bottom._4);
         addAssistChip(chips, null, MaterialIcon.DIRECTIONS_CAR);
         addAssistChip(chips, null, null);
 
-        chips = new Layout();
-        chips.setFlexWrap(FlexWrap.WRAP);
-        chips.setGap(Gap._4);
-        add(chips);
-
+        chips = createChipsLayout();
         addAssistChip(chips, ChipTheme.ELEVATED, MaterialIcon.DIRECTIONS_CAR);
         addAssistChip(chips, ChipTheme.ELEVATED, null);
     }
@@ -64,20 +65,11 @@ public class ChipsView extends View {
     }
 
     private void addFilterChips() {
-        Layout chips = new Layout();
-        chips.addClassNames(Margin.Bottom._4);
-        chips.setFlexWrap(FlexWrap.WRAP);
-        chips.setGap(Gap._4);
-        add(chips);
-
+        Layout chips = createChipsLayout(Margin.Bottom._4);
         addFilterChip(chips, null, MaterialIcon.DIRECTIONS_CAR);
         addFilterChip(chips, null, null);
 
-        chips = new Layout();
-        chips.setFlexWrap(FlexWrap.WRAP);
-        chips.setGap(Gap._4);
-        add(chips);
-
+        chips = createChipsLayout();
         addFilterChip(chips, ChipTheme.ELEVATED, MaterialIcon.DIRECTIONS_CAR);
         addFilterChip(chips, ChipTheme.ELEVATED, null);
     }
@@ -96,29 +88,15 @@ public class ChipsView extends View {
     }
 
     private void addInputChips() {
-        Layout chips = new Layout();
-        chips.addClassNames(Margin.Bottom._4);
-        chips.setFlexWrap(FlexWrap.WRAP);
-        chips.setGap(Gap._4);
-        add(chips);
-
+        Layout chips = createChipsLayout(Margin.Bottom._4);
         addInputChip(chips, null, MaterialIcon.DIRECTIONS_CAR);
         addInputChip(chips, null, (MaterialIcon) null);
 
-        chips = new Layout();
-        chips.addClassNames(Margin.Bottom._4);
-        chips.setFlexWrap(FlexWrap.WRAP);
-        chips.setGap(Gap._4);
-        add(chips);
-
+        chips = createChipsLayout(Margin.Bottom._4);
         addInputChip(chips, ChipTheme.SELECTED, MaterialIcon.DIRECTIONS_CAR);
         addInputChip(chips, ChipTheme.SELECTED, (MaterialIcon) null);
 
-        chips = new Layout();
-        chips.setFlexWrap(FlexWrap.WRAP);
-        chips.setGap(Gap._4);
-        add(chips);
-
+        chips = createChipsLayout();
         addInputChip(chips, "images/avatar.png", "Avatar");
     }
 

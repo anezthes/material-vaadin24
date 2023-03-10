@@ -160,6 +160,7 @@
   "Frontend/themes/material/styles.css",
   "Frontend/themes/material/components/app-layout.css",
   "Frontend/themes/material/components/button.css",
+  "Frontend/themes/material/components/checkbox.css",
   "Frontend/themes/material/components/dialog.css",
   "Frontend/themes/material/components/drawer-toggle.css",
   "Frontend/themes/material/components/input-container.css",
@@ -259,8 +260,9 @@
   "themes/material/styles.css": "82eb522c51c13fe2013fb5aa159cc3f3f774f8f82e9a0d46ecd371f1bb5b33b6",
   "themes/material/components/app-layout.css": "52800df6b085ecaf654803063c2c1bceac0d6f563324de8beef0b8057cab8775",
   "themes/material/components/button.css": "c89a50a0ab4290c7993a4bcd79e04136f7e1fcbdcd6bdce0af64f5b1dc45b728",
+  "themes/material/components/checkbox.css": "21b8782fe21d9abaf98ffc9f3fde70a09d5d9fc4383e0ca7260385733905635f",
   "themes/material/components/dialog.css": "7d3df214795fad2565119f208723cac59d2a4bacb2d96f7e1c59bbd17ef17c9f",
-  "themes/material/components/drawer-toggle.css": "b06536561700051a97ea2a75f634eceaa59fd3d012b5d160f8d0051e8d932e36",
+  "themes/material/components/drawer-toggle.css": "569389d5a2be56baff350443c72e4db3ef180dbdfdc10f0d6b3f37a2d614cc4e",
   "themes/material/components/input-container.css": "57201844b09d6df5bca0ce73af070e7db970b267b7929328a7f7750c048f910e",
   "themes/material/components/text-field.css": "8386c1d3a72eecca2b622288de46c4f9fac65a20845d0d35ffa7735ad3f6bfc2",
   "comboBoxConnector.js": "1d004c3dae9c76f8bcc68678abe1b8f7bdc8b456f5c9c4c7f190df8ed25d66cd",
@@ -285,7 +287,7 @@
  },
  "themeJsonContents": {},
  "entryScripts": [
-  "VAADIN/build/indexhtml-0257ce81.js"
+  "VAADIN/build/indexhtml-bab0af46.js"
  ],
  "webComponents": [],
  "packageJsonHash": "6d22a7a18ac45a8f027a9d08e22dea880b735a66b4e97f1d4a2f5657119f4833"

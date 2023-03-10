@@ -8,11 +8,14 @@
     --hover-background: var(--md-on-surface-variant);
     --focus-background: var(--md-on-surface-variant);
     --pressed-background: var(--md-on-surface-variant);
+
+    height: var(--height);
+    width: var(--width);
 }
 
 :host::before,
 :host::after {
-    inset: 4px;
+inset: 4px;
 }
 
 /* Reset default styles */
