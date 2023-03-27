@@ -124,8 +124,8 @@ html {
     /* Interaction states */
     --md-hover-opacity: 0.08;
     --md-focus-opacity: 0.12;
-    --md-pressed-opacity: 0.12;
-    --md-dragged-opacity: 0.16;
+    --md-press-opacity: 0.12;
+    --md-drag-opacity: 0.16;
     --md-disabled-content-opacity: 0.38;
     --md-disabled-container-opacity: 0.12;
 }

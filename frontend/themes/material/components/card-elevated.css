@@ -29,5 +29,5 @@
     box-shadow: var(--md-elevation-1);
 }
 .card[theme~="elevated"]:active::after {
-    opacity: var(--md-pressed-opacity);
+    opacity: var(--md-press-opacity);
 }

@@ -1,16 +1,12 @@
 /* Common for all icon buttons (except FAB) */
 :host([theme~="icon"]:not([theme*="fab"])) {
+    --container-inset: 4px;
     --height: 48px;
     --icon-size: 24px;
     --padding: 0;
     --width: 48px;
 
     --hover-elevation: none;
-}
-
-:host([theme~="icon"]:not([theme*="fab"]))::before,
-:host([theme~="icon"]:not([theme*="fab"]))::after {
-    inset: 4px;
 }
 
 /* Standard */
@@ -20,7 +16,7 @@
 
     --hover-background: var(--md-on-surface-variant);
     --focus-background: var(--md-on-surface-variant);
-    --pressed-background: var(--md-on-surface-variant);
+    --press-background: var(--md-on-surface-variant);
 }
 
 :host([theme="icon toggle"][aria-pressed="true"]) {
@@ -28,7 +24,7 @@
 
     --hover-background: var(--md-primary);
     --focus-background: var(--md-primary);
-    --pressed-background: var(--md-primary);
+    --press-background: var(--md-primary);
 }
 
 /* Filled */
@@ -38,7 +34,7 @@
 
     --hover-background: var(--md-primary);
     --focus-background: var(--md-primary);
-    --pressed-background: var(--md-primary);
+    --press-background: var(--md-primary);
 }
 
 /* Filled tonal */
@@ -54,8 +50,8 @@
     --hover-background: var(--md-on-surface-variant);
     --focus-background: var(--md-on-surface-variant);
     --focus-outline-color: var(--md-outline);
-    --pressed-color: var(--md-on-surface);
-    --pressed-background: var(--md-on-surface);
+    --press-color: var(--md-on-surface);
+    --press-background: var(--md-on-surface);
 }
 
 :host([theme~="icon"][theme~="outlined"][aria-pressed="true"]) {
@@ -65,6 +61,6 @@
 
     --hover-background: var(--md-inverse-on-surface);
     --focus-background: var(--md-inverse-on-surface);
-    --pressed-color: var(--md-inverse-on-surface);
-    --pressed-background: var(--md-inverse-on-surface);
+    --press-color: var(--md-inverse-on-surface);
+    --press-background: var(--md-inverse-on-surface);
 }

@@ -7,6 +7,6 @@
     --hover-background: var(--md-primary);
     --focus-background: var(--md-primary);
     --focus-outline-color: var(--md-primary);
-    --pressed-background: var(--md-primary);
-    --pressed-outline-color: var(--md-outline);
+    --press-background: var(--md-primary);
+    --press-outline-color: var(--md-outline);
 }

@@ -5,7 +5,7 @@
 
     --hover-background: var(--md-on-surface-variant);
     --focus-background: var(--md-on-surface-variant);
-    --pressed-background: var(--md-on-surface-variant);
+    --press-background: var(--md-on-surface-variant);
 }
 
 :host([theme~="chip"][theme~="assist"]:not([theme~="elevated"])),
@@ -16,7 +16,7 @@
     --disabled-background: none;
     --disabled-outline-color: var(--md-on-surface-variant);
     --focus-outline-color: var(--md-on-surface);
-    --pressed-outline-color: var(--md-outline);
+    --press-outline-color: var(--md-outline);
 }
 
 /* Filter */

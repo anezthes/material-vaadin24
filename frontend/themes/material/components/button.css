@@ -13,6 +13,7 @@
 :host {
     --background: none;
     --color: var(--md-on-surface);
+    --container-inset: 0px;
     --elevation: none;
     --font: var(--md-label-large-size);
     --height: 40px;
@@ -39,11 +40,11 @@
     --focus-elevation: none;
     --focus-opacity: var(--md-focus-opacity);
     --focus-outline-color: none;
-    --pressed-background: var(--hover-background);
-    --pressed-color: var(--color);
-    --pressed-elevation: none;
-    --pressed-opacity: var(--md-pressed-opacity);
-    --pressed-outline-color: none;
+    --press-background: var(--hover-background);
+    --press-color: var(--color);
+    --press-elevation: none;
+    --press-opacity: var(--md-press-opacity);
+    --press-outline-color: none;
 
     border-radius: var(--shape);
     box-shadow: var(--elevation);
@@ -90,7 +91,7 @@
 :host::after {
     border-radius: inherit;
     content: "";
-    inset: 0;
+    inset: var(--container-inset);
     pointer-events: none;
     position: absolute;
 }
@@ -126,16 +127,16 @@
 
 /* Active */
 :host([active]) {
-    box-shadow: var(--pressed-elevation);
-    color: var(--pressed-color);
+    box-shadow: var(--press-elevation);
+    color: var(--press-color);
 }
 :host([active])::before {
-    border-color: var(--pressed-outline-color);
+    border-color: var(--press-outline-color);
 }
 :host([active])::after {
     /* TODO: Ripple effect for chips */
-    background: var(--pressed-background);
-    opacity: var(--pressed-opacity);
+    background: var(--press-background);
+    opacity: var(--press-opacity);
 }
 
 /* Disabled */

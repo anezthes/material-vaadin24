@@ -14,6 +14,7 @@ import com.vaadin.flow.router.PageTitle;
 @CssImport(value = "./themes/material/components/app-layout.css", themeFor = "vaadin-app-layout")
 @CssImport(value = "./themes/material/components/button.css", themeFor = "vaadin-button")
 @CssImport(value = "./themes/material/components/checkbox.css", themeFor = "vaadin-checkbox")
+@CssImport(value = "./themes/material/components/checkbox-group.css", themeFor = "vaadin-checkbox-group")
 @CssImport(value = "./themes/material/components/dialog.css", themeFor = "vaadin-dialog-overlay")
 @CssImport(value = "./themes/material/components/drawer-toggle.css", themeFor = "vaadin-drawer-toggle")
 @CssImport(value = "./themes/material/components/input-container.css", themeFor = "vaadin-input-container")

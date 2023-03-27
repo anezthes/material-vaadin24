@@ -7,7 +7,7 @@
 
     --hover-background: var(--md-on-surface-variant);
     --focus-background: var(--md-on-surface-variant);
-    --pressed-background: var(--md-on-surface-variant);
+    --press-background: var(--md-on-surface-variant);
 
     height: var(--height);
     width: var(--width);

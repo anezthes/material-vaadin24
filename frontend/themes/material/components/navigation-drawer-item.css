@@ -55,7 +55,7 @@
 
 /* Active */
 .navigation-drawer-item a:active::after {
-    opacity: var(--md-drawer-item-pressed-opacity);
+    opacity: var(--md-drawer-item-press-opacity);
 }
 
 /* Highlight */

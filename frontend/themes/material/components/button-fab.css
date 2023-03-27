@@ -8,8 +8,8 @@
     --hover-elevation: var(--md-elevation-4);
     --focus-background: var(--md-on-primary-container);
     --focus-elevation: var(--md-elevation-3);
-    --pressed-background: var(--md-on-primary-container);
-    --pressed-elevation: var(--md-elevation-3);
+    --press-background: var(--md-on-primary-container);
+    --press-elevation: var(--md-elevation-3);
 }
 
 :host([theme~="fab"]) {

@@ -6,6 +6,6 @@
     --hover-elevation: var(--md-elevation-1);
     --focus-background: var(--md-on-secondary-container);
     --focus-elevation: none;
-    --pressed-background: var(--md-on-secondary-container);
-    --pressed-elevation: none;
+    --press-background: var(--md-on-secondary-container);
+    --press-elevation: none;
 }

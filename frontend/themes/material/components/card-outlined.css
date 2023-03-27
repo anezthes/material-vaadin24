@@ -28,5 +28,5 @@
 
 /* Active */
 .card[theme~="outlined"]:active::after {
-    opacity: var(--md-pressed-opacity);
+    opacity: var(--md-press-opacity);
 }

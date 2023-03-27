@@ -41,7 +41,7 @@ html {
 
     --md-drawer-item-hover-opacity: 0.08;
     --md-drawer-item-focus-opacity: 0.12;
-    --md-drawer-item-pressed-opacity: 0.12;
+    --md-drawer-item-press-opacity: 0.12;
 
     /* === Top app bar === */
     --md-top-app-bar-icon-size: 24px;
