@@ -1,3 +1,11 @@
 [part='group-field'] {
     display: flex;
+    flex-direction: column;
+}
+
+[part=label] {
+    font-size: var(--md-body-small-size);
+    font-weight: var(--md-body-small-weight);
+    letter-spacing: var(--md-body-small-tracking);
+    line-height: var(--md-body-small-line-height);
 }
