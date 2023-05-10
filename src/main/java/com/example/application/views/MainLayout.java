@@ -15,9 +15,13 @@ import com.vaadin.flow.router.PageTitle;
 @CssImport(value = "./themes/material/components/button.css", themeFor = "vaadin-button")
 @CssImport(value = "./themes/material/components/checkbox.css", themeFor = "vaadin-checkbox")
 @CssImport(value = "./themes/material/components/checkbox-group.css", themeFor = "vaadin-checkbox-group")
+@CssImport(value = "./themes/material/components/date-picker.css", themeFor = "vaadin-date-picker")
+@CssImport(value = "./themes/material/components/date-picker-overlay-content.css", themeFor = "vaadin-date-picker-overlay-content")
 @CssImport(value = "./themes/material/components/dialog.css", themeFor = "vaadin-dialog-overlay")
 @CssImport(value = "./themes/material/components/drawer-toggle.css", themeFor = "vaadin-drawer-toggle")
 @CssImport(value = "./themes/material/components/input-container.css", themeFor = "vaadin-input-container")
+@CssImport(value = "./themes/material/components/radio-button.css", themeFor = "vaadin-radio-button")
+@CssImport(value = "./themes/material/components/radio-group.css", themeFor = "vaadin-radio-group")
 @CssImport(value = "./themes/material/components/text-field.css", themeFor = "vaadin-combo-box")
 @CssImport(value = "./themes/material/components/text-field.css", themeFor = "vaadin-date-picker")
 @CssImport(value = "./themes/material/components/text-field.css", themeFor = "vaadin-text-field")
@@ -88,11 +92,13 @@ public class MainLayout extends AppLayout {
                 new NavigationDrawerItem(CardsView.class, "Cards", MaterialIcon.DASHBOARD, "100+"),
                 new NavigationDrawerItem(CheckboxView.class, "Checkbox", MaterialIcon.CHECK_BOX),
                 new NavigationDrawerItem(ChipsView.class, "Chips", MaterialIcon.MEMORY),
+                new NavigationDrawerItem(DatePickersView.class, "Date pickers", MaterialIcon.TODAY),
                 new NavigationDrawerItem(DialogsView.class, "Dialogs", MaterialIcon.WEB_ASSET),
                 new NavigationDrawerItem(NavigationBarView.class, "Navigation bar", MaterialIcon.CIRCLE),
                 new NavigationDrawerItem(NavigationDrawerView.class, "Navigation drawer", MaterialIcon.MENU),
                 new NavigationDrawerItem(NavigationRailView.class, "Navigation rail", MaterialIcon.SQUARE),
-                new NavigationDrawerItem(TextFieldsView.class, "Text field", MaterialIcon.TEXT_FIELDS),
+                new NavigationDrawerItem(RadioButtonView.class, "Radio button", MaterialIcon.RADIO_BUTTON_ON),
+                new NavigationDrawerItem(TextFieldsView.class, "Text field", MaterialIcon.INPUT),
                 new NavigationDrawerItem(TopAppBarView.class, "Top app bar", MaterialIcon.VERTICAL_ALIGN_TOP)
         );
 

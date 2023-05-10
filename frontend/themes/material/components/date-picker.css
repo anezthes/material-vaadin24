@@ -1,0 +1,59 @@
+/* Note: This extends text-field.css */
+
+:host {
+    --icon-state-layer-size: 40px;
+    --icon-target-size: 48px;
+}
+
+/* Clear button */
+[part='toggle-button'] {
+    align-items: center;
+    color: var(--md-on-surface-variant);
+    direction: ltr;
+    display: flex;
+    font-family: 'Material Icons';
+    font-size: var(--trailing-icon-size);
+    font-style: normal;
+    font-weight: normal;
+    height: var(--icon-target-size);
+    justify-content: center;
+    letter-spacing: normal;
+    line-height: 1;
+    text-transform: none;
+    white-space: nowrap;
+    width: var(--icon-target-size);
+    word-wrap: normal;
+    position: absolute;
+    right: 4px;
+    top: calc((var(--height) - var(--icon-target-size)) / 2);
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+[part='toggle-button']::before {
+    background: var(--md-on-surface-variant);
+    border-radius: 50%;
+    content: "";
+    inset: calc((var(--icon-target-size) - var(--icon-state-layer-size)) / 2);
+    opacity: 0;
+    position: absolute;
+}
+
+[part='toggle-button']::after {
+    content: "today";
+}
+
+/* Hover */
+[part='toggle-button']:hover::before {
+    opacity: var(--md-hover-opacity);
+}
+
+/* Focus */
+[part='toggle-button']:focus::before {
+    opacity: var(--md-focus-opacity);
+}
+
+/* Active */
+[part='toggle-button']:active::before {
+    opacity: var(--md-press-opacity);
+}

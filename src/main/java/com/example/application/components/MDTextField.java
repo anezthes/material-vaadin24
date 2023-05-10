@@ -39,7 +39,7 @@ public class MDTextField extends TextField {
     @Override
     public void setPrefixComponent(Component component) {
         super.setPrefixComponent(component);
-        if (component instanceof Span && ((Span) component).hasClassName(MATERIAL_ICONS)) {
+        if (component instanceof Span && component.hasClassName(MATERIAL_ICONS)) {
             getElement().setAttribute("leading-icon", component != null);
         } else {
             getElement().setAttribute("prefix", component != null);
@@ -49,7 +49,7 @@ public class MDTextField extends TextField {
     @Override
     public void setSuffixComponent(Component component) {
         super.setSuffixComponent(component);
-        if (component instanceof Span && ((Span) component).hasClassName(MATERIAL_ICONS)) {
+        if (component instanceof Span && component.hasClassName(MATERIAL_ICONS)) {
             getElement().setAttribute("trailing-icon", component != null);
         } else {
             getElement().setAttribute("suffix", component != null);

@@ -9,8 +9,8 @@ import com.vaadin.flow.component.dialog.Dialog;
 
 public class BasicDialog extends Dialog {
 
-    private Button primary;
-    private Button secondary;
+    private final Button primary;
+    private final Button secondary;
 
     public BasicDialog(String title, String text) {
         setHeaderTitle(title);

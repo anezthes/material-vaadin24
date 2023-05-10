@@ -9,8 +9,8 @@ public class BottomAppBar extends Footer {
 
     public static final String BOTTOM_APP_BAR = "bottom-app-bar";
 
-    private Div secondaryActions;
-    private Div primaryAction;
+    private final Div secondaryActions;
+    private final Div primaryAction;
 
     public BottomAppBar(Component... components) {
         addClassNames(BOTTOM_APP_BAR, Surface._2);

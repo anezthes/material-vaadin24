@@ -1,0 +1,5 @@
+:host {
+    background-color: var(--md-background);
+    background-image: linear-gradient(var(--md-surface-3), var(--md-surface-3));
+    border-radius: var(--md-shape-large);
+}

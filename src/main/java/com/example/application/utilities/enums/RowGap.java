@@ -16,7 +16,7 @@ public enum RowGap {
 
     private final String className;
 
-    private RowGap(String className) {
+    RowGap(String className) {
         this.className = className;
     }
 

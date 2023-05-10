@@ -2,6 +2,6 @@
     --height: 96px;
     --icon-size: 36px;
     --padding: 0;
-    --shape: 28px;
+    --shape: var(--md-shape-extra-large);
     --width: 96px;
 }

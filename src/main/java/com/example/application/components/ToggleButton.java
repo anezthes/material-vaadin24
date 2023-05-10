@@ -9,8 +9,8 @@ public class ToggleButton extends Button {
     public static final String ARIA_LABEL = "aria-label";
     public static final String ARIA_PRESSED = "aria-pressed";
 
-    private MaterialIcon enabled;
-    private MaterialIcon disabled;
+    private final MaterialIcon enabled;
+    private final MaterialIcon disabled;
 
     private boolean pressed = false;
 

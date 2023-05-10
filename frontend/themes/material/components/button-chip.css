@@ -1,7 +1,7 @@
 :host([theme~="chip"]) {
     --height: 32px;
     --padding: 0 16px;
-    --shape: 8px;
+    --shape: var(--md-shape-small);
 
     --hover-background: var(--md-on-surface-variant);
     --focus-background: var(--md-on-surface-variant);

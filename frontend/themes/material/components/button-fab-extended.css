@@ -4,7 +4,7 @@
     --min-width: 80px;
     --padding: 0 20px;
     --padding-between-elements: 12px;
-    --shape: 16px;
+    --shape: var(--md-shape-large);
 }
 
 :host([theme~="fab-extended"]) [part='prefix'] ::slotted(.material-icons) {

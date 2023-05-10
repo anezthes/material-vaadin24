@@ -11,8 +11,8 @@ import com.vaadin.flow.theme.lumo.LumoUtility;
 
 public class FullScreenDialog extends Dialog {
 
-    private Button close;
-    private Button save;
+    private final Button close;
+    private final Button save;
 
     public FullScreenDialog(String title, Component... components) {
         addThemeName(DialogTheme.FULL_SCREEN);

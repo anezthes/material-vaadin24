@@ -1,7 +1,7 @@
 :host([theme~="outlined"]) {
     --indicator: inset 0 0 0 1px var(--md-outline);
     --padding: 16px;
-    --shape: 4px;
+    --shape: var(--md-shape-extra-small);
 }
 
 :host([theme~="outlined"][leading-icon]) {

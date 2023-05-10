@@ -10,7 +10,7 @@ public enum FlexDirection {
 
     private final String className;
 
-    private FlexDirection(String className) {
+    FlexDirection(String className) {
         this.className = className;
     }
 

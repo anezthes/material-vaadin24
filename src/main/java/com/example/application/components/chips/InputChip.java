@@ -15,8 +15,8 @@ public class InputChip extends Div implements HasTheme {
     public String PRIMARY_CLASS_NAME = "chip";
     public String SECONDARY_CLASS_NAME = "input";
 
-    private AssistChip chip;
-    private Button close;
+    private final AssistChip chip;
+    private final Button close;
 
     public InputChip(String text) {
         addClassNames(PRIMARY_CLASS_NAME, SECONDARY_CLASS_NAME);

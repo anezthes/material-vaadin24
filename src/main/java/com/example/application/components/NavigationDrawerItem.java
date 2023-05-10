@@ -10,7 +10,7 @@ public class NavigationDrawerItem extends ListItem {
 
     public static final String NAVIGATION_DRAWER_ITEM = "navigation-drawer-item";
 
-    private RouterLink link;
+    private final RouterLink link;
 
     public NavigationDrawerItem(Class<? extends Component> view, String label, MaterialIcon icon) {
         addClassName(NAVIGATION_DRAWER_ITEM);

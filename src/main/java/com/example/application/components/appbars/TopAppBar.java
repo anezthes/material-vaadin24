@@ -11,9 +11,9 @@ public class TopAppBar extends Header {
 
     public static final String TOP_APP_BAR = "top-app-bar";
 
-    private DrawerToggle navigationIcon;
-    private H1 title;
-    private FlexLayout interactiveIcons;
+    private final DrawerToggle navigationIcon;
+    private final H1 title;
+    private final FlexLayout interactiveIcons;
     private Type type;
 
     public TopAppBar() {

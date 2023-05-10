@@ -1,15 +1,12 @@
 package com.example.application.views;
 
 import com.example.application.components.Layout;
-import com.example.application.utilities.classes.Padding;
 import com.example.application.utilities.enums.FlexDirection;
-import com.example.application.utilities.enums.FlexWrap;
 import com.example.application.utilities.enums.Gap;
 import com.vaadin.flow.component.checkbox.Checkbox;
 import com.vaadin.flow.component.checkbox.CheckboxGroup;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import com.vaadin.flow.theme.lumo.LumoUtility;
 
 @PageTitle("Checkbox")
 @Route(value = "checkbox", layout = MainLayout.class)

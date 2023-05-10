@@ -13,7 +13,7 @@ public enum JustifyContent {
 
     private final String className;
 
-    private JustifyContent(String className) {
+    JustifyContent(String className) {
         this.className = className;
     }
 

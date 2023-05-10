@@ -1,0 +1,84 @@
+:host {
+    --icon-color-selected: var(--md-primary);
+    --icon-color-unselected: var(--md-on-surface-variant);
+    --icon-color-disabled: var(--md-on-surface);
+    --icon-size: 24px;
+
+    --padding-between-elements: 16px;
+
+    --state-layer-size: 40px;
+    --target-size: 48px;
+
+    /* Necessary to line up correctly */
+    margin-inline-start: -12px;
+}
+
+.vaadin-radio-button-container {
+    align-items: start;
+}
+
+[part='radio'] {
+    align-items: center;
+    display: flex;
+    height: var(--state-layer-size);
+    justify-content: center;
+    margin: calc((var(--target-size) - var(--state-layer-size)) / 2);
+    position: relative;
+    width: var(--state-layer-size);
+}
+
+[part='radio']::after {
+    box-sizing: border-box;
+    color: var(--icon-color-unselected);
+    content: "radio_button_off";
+    font-size: var(--icon-size);
+    font-family: 'Material Icons';
+    position: absolute;
+}
+
+[part='radio']::before {
+    background: var(--md-on-surface);
+    border-radius: 50%;
+    content: "";
+    display: flex;
+    inset: 0;
+    opacity: 0;
+    position: absolute;
+}
+
+:host([has-label]) ::slotted(label) {
+    padding: calc((var(--target-size) - var(--md-body-large-line-height)) / 2) var(--padding-between-elements);
+}
+
+/* Hover */
+:host(:hover:not([disabled])) [part='radio']::before {
+    opacity: var(--md-hover-opacity);
+}
+
+/* Focus */
+:host([focused]:not([disabled])) [part='radio']::before {
+    opacity: var(--md-focus-opacity);
+}
+
+/* Active */
+:host([active]:not([disabled])) [part='radio']::before {
+    opacity: var(--md-press-opacity);
+}
+
+/* Checked */
+:host([checked]) [part='radio']::before {
+    background: var(--md-primary);
+}
+
+:host([checked]) [part='radio']::after {
+    color: var(--icon-color-selected);
+    content: "radio_button_on";
+}
+
+/* Disabled */
+:host([disabled]) [part='radio'] {
+    opacity: var(--md-disabled-content-opacity);
+}
+:host([disabled]) [part='radio']::after {
+    color: var(--icon-color-disabled);
+}

@@ -7,7 +7,7 @@
     --padding-between-body-actions: 24px;
     --padding-between-icon-title: 16px;
     --padding-between-title-body: 16px;
-    --shape: 28px;
+    --shape: var(--md-shape-extra-large);
 
     --header-height: auto;
     --header-padding: var(--padding) var(--padding) var(--padding-between-title-body) var(--padding);
